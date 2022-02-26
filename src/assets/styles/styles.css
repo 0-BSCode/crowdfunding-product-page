@@ -16,4 +16,13 @@
 
 body {
   min-height: 100vh;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
 }/*# sourceMappingURL=styles.css.map */
