@@ -15,11 +15,11 @@
 
 .app {
     position: relative;
-    min-height: 2160px;
+    min-height: 3000px;
     display: grid;
     grid-template-rows: 1fr 4.4fr;
     background-color: hsl(0%, 0%, 98%);
-    font-family: Commissioner;
+    font-family: CommissionerR;
 }
 
 .overlay {
@@ -29,13 +29,177 @@
     background-color: rgba(0,0,0,0.5);
 }
 
+/*---- HEADER -----*/
+
 .header {
-    background-image: url("../images/image-hero-desktop.jpg");
+    position: relative;
+    background-image: url("../images/image-hero-desktop.jpg");    
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: top center;
+    
+    &__navbar {
+        display: flex;
+        justify-content: space-between;
+        padding: 3rem 11rem;
+        z-index: 2;
+        background: linear-gradient(rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%);
+
+    }
+
+    &__logo,
+    &__links {
+        display: inline;
+    }
+
+    &__link {
+        display: inline-block;
+        padding-left: 2rem;
+        color: white;
+        font-size: 0.9rem;
+        font-family: CommissionerB;
+    }
+
+    &__link a {
+        z-index: 1;
+        transition: all 0.2s;
+
+        &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+            text-decoration-color: rgb(221, 220, 220);
+        }
+    }
 }
 
+/*----- MAIN CARDS -----*/
+
+.container {
+    position: relative;
+    width: 46rem;
+    margin: 0 auto;
+    top: -6rem;
+    display: grid;
+    grid-template-rows: 1.3fr 1fr 5.7fr;
+    grid-row-gap: 1.56rem;
+
+    & > * {
+        border: 0.1rem solid hsl(0,0,96%);
+        border-radius: 0.8rem;
+        background-color: white;
+        position: relative;
+    }
+}
+
+/* TITLE CARD */
+.title {
+    display: grid;
+    place-items: center;
+    padding: 3rem 4.5rem;
+
+
+    &__logo {
+        position: absolute;
+        top: -1.8rem;
+    }
+
+    &__heading {
+        font-family: CommissionerB;
+        font-size: 1.8rem;
+    }
+
+    &__subheading {
+        align-self: start;
+        font-size: 1.02rem;
+        color: colors.$dark-gray;
+    }
+
+    &__btn-list {
+        list-style-type: none;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__btn-item {
+        display: inline-block;
+    }
+
+    &__btn {
+        height: 3.1rem;
+        width: 11rem;
+        border: none;
+        border-radius: 2rem;
+        background-color: colors.$moderate-cyan;
+        color: white;
+        font-family: CommissionerSB;
+        font-size: 0.85rem;
+        letter-spacing: 0.01rem;
+        transition: all 0.2s;
+
+        &:hover {
+            cursor: pointer;
+            background-color: colors.$dark-cyan;
+        }
+    }
+
+    &__bookmark {
+        display: inline-block;
+        position: relative;
+        height: 3.1rem;
+        width: 10rem;
+
+        & input {
+            display: none;
+        }
+    }
+
+    &__toggle {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: hsl(0,0,90%);
+        border-radius: 2rem;
+        z-index: 1;
+
+        &::before {
+            position: absolute;
+            content: "";
+            height: 3.1rem;
+            width: 3.1rem;
+            border-radius: 50%;
+            background-image: url("../images/icon-bookmark.svg");
+            background-size: cover;
+        }
+
+        &::after {
+            position: absolute;
+            content: "Bookmark";
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 0.85rem;
+            font-family: CommissionerSB;
+            color: colors.$dark-gray;
+            padding-left: 2.5rem;
+        }
+    }
+
+    &__bookmark input:checked + &__toggle {
+        background: colors.$light-cyan;
+    }
+
+    &__bookmark input:checked + &__toggle::before {
+        background-image: url("../images/icon-bookmark-checked.svg");
+    }
+
+    &__bookmark input:checked + &__toggle::after {
+        color: colors.$dark-cyan;
+    }
+}
 
 .attribution { 
     font-size: 11px;

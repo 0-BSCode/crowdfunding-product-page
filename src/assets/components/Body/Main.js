@@ -5,7 +5,7 @@ import About from './About'
 
 const Main = () => {
   return (
-    <main className="card">
+    <main className="container">
         <Title />
         <Progress />
         <About />

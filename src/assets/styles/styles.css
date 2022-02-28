@@ -1,6 +1,38 @@
 @font-face {
-  font-family: Commissioner;
-  src: url("../fonts/Commissioner-VariableFont_wght.ttf");
+  font-family: CommissionerT;
+  src: url("../fonts/static/Commissioner-Thin.ttf");
+}
+@font-face {
+  font-family: CommissionerEL;
+  src: url("../fonts/static/Commissioner-ExtraLight.ttf");
+}
+@font-face {
+  font-family: CommissionerL;
+  src: url("../fonts/static/Commissioner-Light.ttf");
+}
+@font-face {
+  font-family: CommissionerR;
+  src: url("../fonts/static/Commissioner-Regular.ttf");
+}
+@font-face {
+  font-family: CommissionerM;
+  src: url("../fonts/static/Commissioner-Medium.ttf");
+}
+@font-face {
+  font-family: CommissionerSB;
+  src: url("../fonts/static/Commissioner-SemiBold.ttf");
+}
+@font-face {
+  font-family: CommissionerB;
+  src: url("../fonts/static/Commissioner-Bold.ttf");
+}
+@font-face {
+  font-family: CommissionerEB;
+  src: url("../fonts/static/Commissioner-ExtraBold.ttf");
+}
+@font-face {
+  font-family: CommissionerBl;
+  src: url("../fonts/static/Commissioner-Black.ttf");
 }
 *,
 *::before,
@@ -16,11 +48,11 @@
 
 .app {
   position: relative;
-  min-height: 2160px;
+  min-height: 3000px;
   display: grid;
   grid-template-rows: 1fr 4.4fr;
   background-color: #fafafa;
-  font-family: Commissioner;
+  font-family: CommissionerR;
 }
 
 .overlay {
@@ -30,11 +62,151 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+/*---- HEADER -----*/
 .header {
+  position: relative;
   background-image: url("../images/image-hero-desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: top center;
+}
+.header__navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 11rem;
+  z-index: 2;
+  background: linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+}
+.header__logo, .header__links {
+  display: inline;
+}
+.header__link {
+  display: inline-block;
+  padding-left: 2rem;
+  color: white;
+  font-size: 0.9rem;
+  font-family: CommissionerB;
+}
+.header__link a {
+  z-index: 1;
+  transition: all 0.2s;
+}
+.header__link a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #dddcdc;
+          text-decoration-color: #dddcdc;
+}
+
+/*----- MAIN CARDS -----*/
+.container {
+  position: relative;
+  width: 46rem;
+  margin: 0 auto;
+  top: -6rem;
+  display: grid;
+  grid-template-rows: 1.3fr 1fr 5.7fr;
+  grid-row-gap: 1.56rem;
+}
+.container > * {
+  border: 0.1rem solid whitesmoke;
+  border-radius: 0.8rem;
+  background-color: white;
+  position: relative;
+}
+
+/* TITLE CARD */
+.title {
+  display: grid;
+  place-items: center;
+  padding: 3rem 4.5rem;
+}
+.title__logo {
+  position: absolute;
+  top: -1.8rem;
+}
+.title__heading {
+  font-family: CommissionerB;
+  font-size: 1.8rem;
+}
+.title__subheading {
+  align-self: start;
+  font-size: 1.02rem;
+  color: #7a7a7a;
+}
+.title__btn-list {
+  list-style-type: none;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.title__btn-item {
+  display: inline-block;
+}
+.title__btn {
+  height: 3.1rem;
+  width: 11rem;
+  border: none;
+  border-radius: 2rem;
+  background-color: #3cb4ac;
+  color: white;
+  font-family: CommissionerSB;
+  font-size: 0.85rem;
+  letter-spacing: 0.01rem;
+  transition: all 0.2s;
+}
+.title__btn:hover {
+  cursor: pointer;
+  background-color: #147b74;
+}
+.title__bookmark {
+  display: inline-block;
+  position: relative;
+  height: 3.1rem;
+  width: 10rem;
+}
+.title__bookmark input {
+  display: none;
+}
+.title__toggle {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #e6e6e6;
+  border-radius: 2rem;
+  z-index: 1;
+}
+.title__toggle::before {
+  position: absolute;
+  content: "";
+  height: 3.1rem;
+  width: 3.1rem;
+  border-radius: 50%;
+  background-image: url("../images/icon-bookmark.svg");
+  background-size: cover;
+}
+.title__toggle::after {
+  position: absolute;
+  content: "Bookmark";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.85rem;
+  font-family: CommissionerSB;
+  color: #7a7a7a;
+  padding-left: 2.5rem;
+}
+.title__bookmark input:checked + .title__toggle {
+  background: #f5f9fa;
+}
+.title__bookmark input:checked + .title__toggle::before {
+  background-image: url("../images/icon-bookmark-checked.svg");
+}
+.title__bookmark input:checked + .title__toggle::after {
+  color: #147b74;
 }
 
 .attribution {
