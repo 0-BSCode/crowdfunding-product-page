@@ -126,16 +126,16 @@
     }
 
     &__btn {
-        height: 3.1rem;
-        width: 11rem;
+        height: 3.3rem;
+        width: 11.5rem;
         border: none;
         border-radius: 2rem;
-        background-color: colors.$moderate-cyan;
+        background-color: #3cb4ac;
         color: white;
         font-family: CommissionerSB;
-        font-size: 0.85rem;
+        font-size: 0.9rem;
         letter-spacing: 0.01rem;
-        transition: all 0.2s;
+        transition: all 0.2s;    
 
         &:hover {
             cursor: pointer;
@@ -146,8 +146,8 @@
     &__bookmark {
         display: inline-block;
         position: relative;
-        height: 3.1rem;
-        width: 10rem;
+        height: 3.3rem;
+        width: 10.5rem;
 
         & input {
             display: none;
@@ -168,8 +168,8 @@
         &::before {
             position: absolute;
             content: "";
-            height: 3.1rem;
-            width: 3.1rem;
+            height: 3.3rem;
+            width: 3.3rem;
             border-radius: 50%;
             background-image: url("../images/icon-bookmark.svg");
             background-size: cover;
@@ -181,10 +181,10 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             font-family: CommissionerSB;
             color: colors.$dark-gray;
-            padding-left: 2.5rem;
+            padding-left: 2.8rem;
         }
     }
 
@@ -198,6 +198,7 @@
 
     &__bookmark input:checked + &__toggle::after {
         color: colors.$dark-cyan;
+        content: "Bookmarked";
     }
 }
 
@@ -208,11 +209,9 @@
     padding: 3rem 4.5rem;
 
     &__stats {
-        width: 85%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        justify-self: start;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 5fr 2fr 5fr 2fr 5fr;
     }
 
     &__stat {
@@ -234,7 +233,8 @@
         height: inherit;
         width: 0.1rem;
         background-color: colors.$dark-gray;
-        opacity: 0.3;
+        opacity: 0.15;
+        margin-left: 1rem;
     }
 
     &__tracker {
