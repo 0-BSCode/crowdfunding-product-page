@@ -2,37 +2,37 @@ import React from 'react'
 
 const Progress = () => {
   return (
-    <section className="card__progress">
-        <div className="card__stats">
-            <div className="card__stats-container">
-                <h2 className="card__stats-head">
+    <section className="progress">
+        <div className="progress__stats">
+            <div className="progress__stat">
+                <h2 className="progress__stat-head">
                     $89,914
                 </h2>
-                <p className="card__stats-subtitle">
+                <p className="progress__stat-subtitle">
                     of $100,000 backed
                 </p>
             </div>
-            <div className="card__vline"></div>
-            <div className="card__stats-container">
-                <h2 className="card__stats-head">
+            <div className="progress__vline"></div>
+            <div className="progress__stat">
+                <h2 className="progress__stat-head">
                     5,007
                 </h2>
-                <p className="card__stats-subtitle">
+                <p className="progress__stat-subtitle">
                     total backers
                 </p>
             </div>
-            <div className="card__vline"></div>
-            <div className="card__stats-container">
-                <h2 className="card__stats-head">
+            <div className="progress__vline"></div>
+            <div className="progress__stat">
+                <h2 className="progress__stat-head">
                     56
                 </h2>
-                <p className="card__stats-subtitle">
+                <p className="progress__stat-subtitle">
                     days left
                 </p>
             </div>
         </div>
-        <div className="card__tracker">
-            <input type="range" min="1" max="100000" value="89914" className="card__slider" />
+        <div className="progress__tracker">
+            <input type="range" min="1" max="100000" value="89914" className="progress__slider" />
         </div>
     </section>
   )
