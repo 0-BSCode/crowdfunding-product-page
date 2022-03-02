@@ -1,8 +1,12 @@
 import React from 'react'
+import exit from '../../images/icon-close-modal.svg'
 
 const Support = () => {
   return (
     <section className="support">
+        <button className="support__exit">
+            <img className="support__exit-img" alt="Exit" src={exit} />
+        </button>
         <h3 className="support__header">
             Back this project
         </h3>
@@ -10,10 +14,10 @@ const Support = () => {
             Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?
         </p>
         <div className="support__options">
-            <label className="option option__none">
+            <label className="option">
                 <input type="radio" name="radio"/>
                 <span className="option__radio"></span>
-                <h4 className="option__header">
+                <h4 className="option__header option__header--none">
                     Pledge with no reward
                 </h4>
                 <p className="option__description">
@@ -31,10 +35,10 @@ const Support = () => {
                     </button>
                 </div>
             </label>
-            <label className="option option__normal">
+            <label className="option">
                 <input type="radio" name="radio" />
                 <span className="option__radio"></span>
-                <div className="option__header">
+                <div className="option__header option__header--pledge">
                     <h4 className="option__heading">
                         Bamboo Stand
                     </h4>
@@ -60,10 +64,10 @@ const Support = () => {
                     </button>
                 </div>
             </label>
-            <label className="option option__premium">
+            <label className="option">
                 <input type="radio" name="radio" />
                 <span className="option__radio"></span>
-                <div className="option__header">
+                <div className="option__header option__header--pledge">
                     <h4 className="option__heading">
                         Black Edition Stand
                     </h4>
@@ -89,10 +93,10 @@ const Support = () => {
                     </button>
                 </div>
             </label>
-            <label className="option option__deluxe">
+            <label className="option option--out">
                 <input type="radio" name="radio" />
                 <span className="option__radio"></span>
-                <div className="option__header">
+                <div className="option__header option__header--pledge">
                     <h4 className="option__heading">
                         Mahogany Special Stand
                     </h4>
