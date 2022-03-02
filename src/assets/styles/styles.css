@@ -279,7 +279,7 @@
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   grid-row-gap: 2rem;
-  height: 58rem;
+  height: 57rem;
 }
 
 /* REWARDS */
@@ -303,24 +303,23 @@
 .reward__title {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 .reward__header {
   font-family: CommissionerB;
-  font-size: 1rem;
+  font-size: 1.25rem;
 }
 .reward__criteria {
   font-family: CommissionerM;
   color: #3cb4ac;
-  font-size: 0.87rem;
+  font-size: 1rem;
 }
 .reward__description {
-  margin: 2rem 0;
+  margin: 1.5rem 0rem 2.3rem 0rem;
   color: #7a7a7a;
-  font-size: 0.9rem;
+  font-size: 1.03rem;
   text-align: justify;
   letter-spacing: 0.01rem;
-  line-height: 1.8rem;
+  line-height: 1.85rem;
 }
 .reward__footer {
   display: flex;
@@ -329,25 +328,25 @@
 }
 .reward__left {
   font-family: CommissionerB;
-  font-size: 1.7rem;
+  font-size: 1.9rem;
 }
 .reward__left span {
   font-family: CommissionerR;
   font-size: 1rem;
   color: #7a7a7a;
   position: relative;
-  bottom: 0.25rem;
-  left: 0.3rem;
+  bottom: 0.3rem;
+  left: 0.35rem;
 }
 .reward__select {
-  height: 2.8rem;
-  width: 8.7rem;
+  height: 3rem;
+  width: 10.7rem;
   border-radius: 1.5rem;
   border: none;
   background-color: #3cb4ac;
   color: white;
   font-family: CommissionerM;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   letter-spacing: 0.01rem;
   cursor: pointer;
   transition: all 0.2s;
