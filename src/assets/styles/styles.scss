@@ -35,7 +35,7 @@
     position: relative;
     background-image: url("../images/image-hero-desktop.jpg");    
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-position: top center;
     
     &__navbar {
@@ -76,9 +76,10 @@
 
 .container {
     position: relative;
-    width: 46rem;
+    width: 48rem;
+    height: 119rem;
     margin: 0 auto;
-    top: -6rem;
+    top: -14rem;
     display: grid;
     grid-template-rows: 1.3fr 1fr 5.7fr;
     grid-row-gap: 1.56rem;
@@ -95,8 +96,7 @@
 .title {
     display: grid;
     place-items: center;
-    padding: 3rem 4.5rem;
-
+    padding: 2.5rem 3rem 2rem 3rem;
 
     &__logo {
         position: absolute;
@@ -105,12 +105,12 @@
 
     &__heading {
         font-family: CommissionerB;
-        font-size: 1.8rem;
+        font-size: 1.9rem;
     }
 
     &__subheading {
         align-self: start;
-        font-size: 1.02rem;
+        font-size: 1.1rem;
         color: colors.$dark-gray;
     }
 
@@ -127,7 +127,7 @@
 
     &__btn {
         height: 3.3rem;
-        width: 11.5rem;
+        width: 13rem;
         border: none;
         border-radius: 2rem;
         background-color: #3cb4ac;
@@ -147,7 +147,7 @@
         display: inline-block;
         position: relative;
         height: 3.3rem;
-        width: 10.5rem;
+        width: 11rem;
 
         & input {
             display: none;
@@ -205,7 +205,7 @@
 .progress {
     display: grid;
     place-items: center;
-    padding: 3rem 4.5rem;
+    padding: 2rem 3rem;
 
     &__stats {
         width: 100%;
@@ -219,12 +219,12 @@
 
     &__stat-head {
         font-family: CommissionerB;
-        font-size: 1.9rem;
+        font-size: 2.2rem;
     }
 
     &__stat-subtitle {
         color: colors.$dark-gray;
-        font-size: 0.9rem;
+        font-size: 1rem;
         margin-top: 0.4rem;
     }
 
@@ -237,7 +237,7 @@
     }
 
     &__tracker {
-        align-self: end;
+        align-self: center;
         width: 100%;
     }
 
@@ -259,16 +259,17 @@
 
 /* ABOUT CARD */
 .about {
-    padding: 4rem 4.5rem;
+    padding: 3.5rem 3rem;
 
     &__heading {
         font-family: CommissionerB;
+        font-size: 1.2rem;
     }
 
     &__description {
         color: colors.$dark-gray;
-        font-size: 0.9rem;
-        line-height: 1.5rem;
+        font-size: 1.03rem;
+        line-height: 1.65rem;
         letter-spacing: 0.01rem;
         margin-top: 2rem;
         margin-bottom: 3rem;
@@ -286,8 +287,7 @@
 .reward {
     border: 0.1rem solid hsl(0,0,96%);
     border-radius: 0.8rem;
-    padding: 0 2rem;
-    padding-top: 3.5rem;
+    padding: 2.5rem 2rem;
     position: relative;
 
     &--out {

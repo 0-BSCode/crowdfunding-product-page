@@ -67,7 +67,7 @@
   position: relative;
   background-image: url("../images/image-hero-desktop.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: top center;
 }
 .header__navbar {
@@ -101,9 +101,10 @@
 /*----- MAIN CARDS -----*/
 .container {
   position: relative;
-  width: 46rem;
+  width: 48rem;
+  height: 119rem;
   margin: 0 auto;
-  top: -6rem;
+  top: -14rem;
   display: grid;
   grid-template-rows: 1.3fr 1fr 5.7fr;
   grid-row-gap: 1.56rem;
@@ -119,7 +120,7 @@
 .title {
   display: grid;
   place-items: center;
-  padding: 3rem 4.5rem;
+  padding: 2.5rem 3rem 2rem 3rem;
 }
 .title__logo {
   position: absolute;
@@ -127,11 +128,11 @@
 }
 .title__heading {
   font-family: CommissionerB;
-  font-size: 1.8rem;
+  font-size: 1.9rem;
 }
 .title__subheading {
   align-self: start;
-  font-size: 1.02rem;
+  font-size: 1.1rem;
   color: #7a7a7a;
 }
 .title__btn-list {
@@ -145,7 +146,7 @@
 }
 .title__btn {
   height: 3.3rem;
-  width: 11.5rem;
+  width: 13rem;
   border: none;
   border-radius: 2rem;
   background-color: #3cb4ac;
@@ -163,7 +164,7 @@
   display: inline-block;
   position: relative;
   height: 3.3rem;
-  width: 10.5rem;
+  width: 11rem;
 }
 .title__bookmark input {
   display: none;
@@ -213,7 +214,7 @@
 .progress {
   display: grid;
   place-items: center;
-  padding: 3rem 4.5rem;
+  padding: 2rem 3rem;
 }
 .progress__stats {
   width: 100%;
@@ -225,11 +226,11 @@
 }
 .progress__stat-head {
   font-family: CommissionerB;
-  font-size: 1.9rem;
+  font-size: 2.2rem;
 }
 .progress__stat-subtitle {
   color: #7a7a7a;
-  font-size: 0.9rem;
+  font-size: 1rem;
   margin-top: 0.4rem;
 }
 .progress__vline {
@@ -240,7 +241,7 @@
   margin-left: 1rem;
 }
 .progress__tracker {
-  align-self: end;
+  align-self: center;
   width: 100%;
 }
 .progress__slider {
@@ -260,15 +261,16 @@
 
 /* ABOUT CARD */
 .about {
-  padding: 4rem 4.5rem;
+  padding: 3.5rem 3rem;
 }
 .about__heading {
   font-family: CommissionerB;
+  font-size: 1.2rem;
 }
 .about__description {
   color: #7a7a7a;
-  font-size: 0.9rem;
-  line-height: 1.5rem;
+  font-size: 1.03rem;
+  line-height: 1.65rem;
   letter-spacing: 0.01rem;
   margin-top: 2rem;
   margin-bottom: 3rem;
@@ -284,8 +286,7 @@
 .reward {
   border: 0.1rem solid whitesmoke;
   border-radius: 0.8rem;
-  padding: 0 2rem;
-  padding-top: 3.5rem;
+  padding: 2.5rem 2rem;
   position: relative;
 }
 .reward--out::after {
