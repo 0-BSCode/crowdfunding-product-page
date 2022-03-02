@@ -308,6 +308,7 @@
     &__title {
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 
     &__header {
@@ -333,7 +334,6 @@
     &__footer {
         display: flex;
         justify-content: space-between;
-        align-items: center;
     }
 
     &__left {

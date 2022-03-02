@@ -303,6 +303,7 @@
 .reward__title {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .reward__header {
   font-family: CommissionerB;
@@ -324,7 +325,6 @@
 .reward__footer {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 .reward__left {
   font-family: CommissionerB;
