@@ -106,7 +106,7 @@
   margin: 0 auto;
   top: -14rem;
   display: grid;
-  grid-template-rows: 1.3fr 1fr 5.7fr;
+  grid-template-rows: 1.2fr 1fr 5.7fr;
   grid-row-gap: 1.56rem;
 }
 .container > * {
