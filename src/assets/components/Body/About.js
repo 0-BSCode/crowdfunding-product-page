@@ -59,7 +59,7 @@ const About = () => {
                     </button>
                 </div>
             </div>
-            <div className="reward">
+            <div className="reward reward--out">
                 <div className="reward__title">
                     <h4 className="reward__header">
                         Mahogany Special Edition
