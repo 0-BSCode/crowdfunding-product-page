@@ -407,7 +407,7 @@
 
     &__options {
         display: grid;
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
         grid-row-gap: 1.5rem;
     }
 }
@@ -417,8 +417,54 @@
 .option {
     border: 0.1rem solid hsl(0,0,96%);
     border-radius: 0.8rem;
-    padding: 2.5rem;
+    padding: 2.5rem 1.8rem;
     position: relative;
+    display: block;
+
+    /* Hide default radio button */
+    & input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    /* Create custom radio button */
+    &__radio {
+        position: absolute;
+        top: 2.5rem;
+        left: 1.8rem;
+        height: 1.5rem;
+        width: 1.5rem;
+        background-color: white;
+        border-radius: 50%;
+        border: solid 0.15rem whitesmoke;
+        z-index: 1;
+
+        /* Color inside radio button once clicked */
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0.2rem;
+            left: 0.2rem;
+            width: 0.8rem;
+            height: 0.8rem;
+            background-color: colors.$moderate-cyan;
+            border-radius: 50%;
+            display: none;
+        }   
+    }
+
+    & input:hover ~ &__radio {
+        background-color: rgba(0,0,0,0.1);
+    }
+
+    & input:checked ~ &__radio {
+        background-color: white;
+    }
+
+    & input:checked ~ &__radio::after {
+        display: block;
+    }
 
     &--out {
         &::after {
@@ -431,17 +477,45 @@
             width: 100%;
             height: 100%;
             border-radius: inherit;
+            z-index: 2;
         }
+    }
+
+    &__header,
+    &__description {
+        margin-left: 3rem;
     }
 
     &__header {
         display: inline-block;
+        font-size: 1rem;
 
         &--pledge {
-            display: flex;
+            display: inline-flex;
         }
     }
+
+    &__description {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+        color: colors.$dark-gray;
+        font-size: 0.95rem;
+        line-height: 1.6rem;
+    }
+
+    &__hline {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 0.1rem;
+        background-color: whitesmoke;
+    }
 }
+
+/* PAYMENT SECTION OF POPUP */
+.payment {
+    margin-top: 3rem;
+}   
 .attribution { 
     font-size: 11px;
     text-align: center; 
