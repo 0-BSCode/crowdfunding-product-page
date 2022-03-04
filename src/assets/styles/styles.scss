@@ -454,8 +454,9 @@
         }   
     }
 
-    & input:hover ~ &__radio {
-        background-color: rgba(0,0,0,0.1);
+    & input:hover ~ &__header--none,
+    & input:hover ~ &__header--pledge > &__header-container > &__heading {
+        color: colors.$moderate-cyan;
     }
 
     & input:checked ~ &__radio {
@@ -491,8 +492,39 @@
         font-size: 1rem;
 
         &--pledge {
-            display: inline-flex;
+            display: flex;
+            justify-content: space-between;
         }
+    }
+
+    &__heading,
+    &__pledge {
+        display: inline-block;
+        font-family: CommissionerB;
+    }
+
+    &__heading {
+        font-size: 1rem;
+    }
+
+    &__pledge {
+        padding-left: 1.3rem;
+        font-size: 0.9rem;
+        color: colors.$moderate-cyan;
+    }
+
+    &__left {
+        font-family: CommissionerB;
+        font-size: 1.3rem;
+    }
+
+    &__left span {
+        font-family: CommissionerR;
+        color: colors.$dark-gray;
+        font-size: 0.85rem;
+        padding-left: 0.3rem;
+        position: relative;
+        bottom: 0.2rem;
     }
 
     &__description {
@@ -515,6 +547,14 @@
 /* PAYMENT SECTION OF POPUP */
 .payment {
     margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__par {
+        color: colors.$dark-gray;
+        font-size: 0.95rem;
+    }
 }   
 .attribution { 
     font-size: 11px;

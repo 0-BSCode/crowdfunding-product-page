@@ -431,8 +431,8 @@
   border-radius: 50%;
   display: none;
 }
-.option input:hover ~ .option__radio {
-  background-color: rgba(0, 0, 0, 0.1);
+.option input:hover ~ .option__header--none, .option input:hover ~ .option__header--pledge > .option__header-container > .option__heading {
+  color: #3cb4ac;
 }
 .option input:checked ~ .option__radio {
   background-color: white;
@@ -460,7 +460,32 @@
   font-size: 1rem;
 }
 .option__header--pledge {
-  display: inline-flex;
+  display: flex;
+  justify-content: space-between;
+}
+.option__heading, .option__pledge {
+  display: inline-block;
+  font-family: CommissionerB;
+}
+.option__heading {
+  font-size: 1rem;
+}
+.option__pledge {
+  padding-left: 1.3rem;
+  font-size: 0.9rem;
+  color: #3cb4ac;
+}
+.option__left {
+  font-family: CommissionerB;
+  font-size: 1.3rem;
+}
+.option__left span {
+  font-family: CommissionerR;
+  color: #7a7a7a;
+  font-size: 0.85rem;
+  padding-left: 0.3rem;
+  position: relative;
+  bottom: 0.2rem;
 }
 .option__description {
   margin-top: 1.5rem;
@@ -480,6 +505,13 @@
 /* PAYMENT SECTION OF POPUP */
 .payment {
   margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.payment__par {
+  color: #7a7a7a;
+  font-size: 0.95rem;
 }
 
 .attribution {

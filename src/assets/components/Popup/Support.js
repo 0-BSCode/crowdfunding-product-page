@@ -29,22 +29,26 @@ const Support = () => {
                     <p className="payment__par">
                         Enter your pledge
                     </p>
-                    <input type="text" className="payment__input"/>
-                    <button className="payment__submit">
-                        Continue
-                    </button>
+                    <form className="payment__form">
+                        <input type="text" className="payment__input"/>
+                        <button type="submit" className="payment__submit">
+                            Continue
+                        </button>
+                    </form>
                 </div>
             </label>
             <label className="option">
                 <input type="radio" name="radio" />
                 <span className="option__radio"></span>
                 <div className="option__header option__header--pledge">
-                    <h4 className="option__heading">
-                        Bamboo Stand
-                    </h4>
-                    <p className="option__pledge">
-                        Pledge $25 or more
-                    </p>
+                    <div className="option__header-container">
+                        <h4 className="option__heading">
+                            Bamboo Stand 
+                        </h4>
+                        <p className="option__pledge">
+                            Pledge $25 or more
+                        </p>
+                    </div>
                     <p className="option__left">
                         101 <span>left</span>
                     </p>
@@ -58,22 +62,26 @@ const Support = () => {
                     <p className="payment__par">
                         Enter your pledge
                     </p>
-                    <input type="text" className="payment__input"/>
-                    <button className="payment__submit">
-                        Continue
-                    </button>
+                    <form className="payment__form">
+                        <input type="text" className="payment__input"/>
+                        <button type="submit" className="payment__submit">
+                            Continue
+                        </button>
+                    </form>
                 </div>
             </label>
             <label className="option">
                 <input type="radio" name="radio" />
                 <span className="option__radio"></span>
                 <div className="option__header option__header--pledge">
-                    <h4 className="option__heading">
-                        Black Edition Stand
-                    </h4>
-                    <p className="option__pledge">
-                        Pledge $75 or more
-                    </p>
+                    <div className="option__header-container">
+                        <h4 className="option__heading">
+                            Black Edition Stand
+                        </h4>
+                        <p className="option__pledge">
+                            Pledge $75 or more
+                        </p>
+                    </div>
                     <p className="option__left">
                         64 <span>left</span>
                     </p>
@@ -87,22 +95,26 @@ const Support = () => {
                     <p className="payment__par">
                         Enter your pledge
                     </p>
-                    <input type="text" className="payment__input"/>
-                    <button className="payment__submit">
-                        Continue
-                    </button>
+                    <form className="payment__form">
+                        <input type="text" className="payment__input"/>
+                        <button type="submit" className="payment__submit">
+                            Continue
+                        </button>
+                    </form>
                 </div>
             </label>
             <label className="option option--out">
-                <input type="radio" name="radio" />
+                <input type="radio" name="radio"/>
                 <span className="option__radio"></span>
                 <div className="option__header option__header--pledge">
-                    <h4 className="option__heading">
-                        Mahogany Special Stand
-                    </h4>
-                    <p className="option__pledge">
-                        Pledge $200 or more
-                    </p>
+                    <div className="option__header-container">
+                        <h4 className="option__heading">
+                            Mahogany Special Stand
+                        </h4>
+                        <p className="option__pledge">
+                            Pledge $200 or more
+                        </p>
+                    </div>
                     <p className="option__left">
                         0 <span>left</span>
                     </p>
@@ -116,10 +128,12 @@ const Support = () => {
                     <p className="payment__par">
                         Enter your pledge
                     </p>
-                    <input type="text" className="payment__input"/>
-                    <button className="payment__submit">
-                        Continue
-                    </button>
+                    <form className="payment__form">
+                        <input type="text" className="payment__input"/>
+                        <button type="submit" className="payment__submit">
+                            Continue
+                        </button>
+                    </form>
                 </div>
             </label>
         </div>
