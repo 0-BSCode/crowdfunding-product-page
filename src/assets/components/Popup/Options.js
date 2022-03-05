@@ -10,6 +10,7 @@ const Options = ({rewardId, setRewardId}) => {
         rewardId={rewardId}
         setRewardId={setRewardId}
         heading="Pledge with no reward"
+        pledge=""
         description="Choose to support us without a reward if 
         you simply believe in our project. As a backer, you 
         will be signed up to receive product updates via email." />

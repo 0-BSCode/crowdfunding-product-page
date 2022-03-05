@@ -8,6 +8,16 @@ const Option = ({id, rewardId, setRewardId,
   }
 
   useEffect(() => {
+    // Make radio button clicked when corresponding reward 
+    // button is clicked
+    const buttons = document.querySelectorAll(".option__radio");
+    buttons.forEach(button => {
+        if (button.id == rewardId) {
+            button.checked = true;
+        }
+    })
+
+    // Update container border when clicked
     const containers = document.querySelectorAll(".option");
     containers.forEach((container) => {
         container.firstChild.id == rewardId?
@@ -19,6 +29,7 @@ const Option = ({id, rewardId, setRewardId,
   return (
     <label className={left == "0"? "option option--out": "option"} >
         <input 
+        className="option__radio"
         type="radio" 
         name="radio" 
         disabled={left=="0"} 
@@ -74,7 +85,6 @@ const Option = ({id, rewardId, setRewardId,
 }
 
 Option.defaultProps = {
-    pledge: "0",
     left: ""
 }
 
