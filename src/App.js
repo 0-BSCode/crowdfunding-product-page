@@ -12,8 +12,8 @@ function App() {
       <Main />
       <Footer />
       {/* <div className="overlay"></div> */}
-      <Support />
-      {/*<Thanks /> */}
+      {/* <Support /> */}
+      <Thanks />
     </div>
   );
 }

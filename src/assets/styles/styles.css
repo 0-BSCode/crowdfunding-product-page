@@ -557,6 +557,59 @@
   cursor: pointer;
 }
 
+/* THANKS CARD */
+.thanks {
+  width: 35rem;
+  height: 31rem;
+  position: absolute;
+  top: 30rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: white;
+  border: solid 0.1rem whitesmoke;
+  border-radius: 0.7rem;
+  padding: 3.5rem;
+}
+.thanks__img {
+  display: block;
+  width: 25%;
+  margin-inline: auto;
+  margin-bottom: 3rem;
+}
+.thanks__header, .thanks__description {
+  text-align: center;
+}
+.thanks__header {
+  font-family: CommissionerB;
+  font-size: 1.6rem;
+  letter-spacing: 0.01rem;
+  margin-bottom: 1.5rem;
+}
+.thanks__description {
+  color: #7a7a7a;
+  font-size: 1rem;
+  line-height: 2rem;
+  margin-bottom: 2rem;
+}
+.thanks__btn {
+  display: block;
+  margin-inline: auto;
+  height: 3.1rem;
+  width: 7rem;
+  border: none;
+  border-radius: 1.5rem;
+  background-color: #3cb4ac;
+  color: white;
+  font-family: CommissionerB;
+  font-size: 0.9rem;
+  letter-spacing: 0.01rem;
+  transition: all 0.2s;
+}
+.thanks__btn:hover {
+  background-color: #147b74;
+  cursor: pointer;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
