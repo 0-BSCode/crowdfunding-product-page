@@ -1,31 +1,33 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const Tracker = ({amount}) => {
 
-  const handleInput = (e) => {
-    console.log("Max: " + e.target.max);
-    console.log("Min: " + e.target.min);
-    console.log("Val: " + e.target.value);
-    const bgColor = 'hsl(0%, 0%, 98%)';
+  const showProgress = () => {
+    const slider = document.querySelector(".progress__slider");
+    console.log("Max: " + slider.max);
+    console.log("Min: " + slider.min);
+    console.log("Val: " + slider.value);
+    const bgColor = 'hsl(192, 29%, 97%)';
     const fillColor = 'hsl(176, 50%, 47%)';
-    let val = Math.floor((e.target.value - e.target.min) / (e.target.max - e.target.min) * 100);
-    console.log("Value: " + val)
-    e.target.style.backgroundColor = `linear-gradient(to right, 
+    let val = Math.floor((slider.value - slider.min) / (slider.max - slider.min) * 100);
+    console.log("Value: " + val);
+    slider.style.background = `linear-gradient(to right, 
                           ${fillColor} 0%, 
-                          ${fillColor} ${50}%,
-                          ${bgColor} ${50}%,
-                          ${bgColor} 100%)`
+                          ${fillColor} ${val}%,
+                          ${bgColor} ${val}%,
+                          ${bgColor} 100%)`;
   }
+
+  useEffect(() => showProgress);
 
   return (
     <div className="progress__tracker">
-        <input 
+        <input
         type="range" 
         min={0}
         max={100000} 
         value={amount}
-        className="progress__slider" 
-        onInput={handleInput} />
+        className="progress__slider" />
     </div>
   )
 }
