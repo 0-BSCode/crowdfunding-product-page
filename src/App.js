@@ -25,7 +25,8 @@ function App() {
         <>
           <div className="overlay" />
           <Support 
-          resetRewardId={setRewardBtnId} />
+          rewardId={rewardBtnId}
+          setRewardId={setRewardBtnId} />
         </>:''
       }
       {/* <Thanks /> */}

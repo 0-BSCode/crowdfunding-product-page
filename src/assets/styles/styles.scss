@@ -424,6 +424,10 @@
     position: relative;
     display: block;
 
+    &--clicked {
+        border-color: colors.$moderate-cyan;
+    }
+
     /* Hide default radio button */
     & > input {
         position: absolute;

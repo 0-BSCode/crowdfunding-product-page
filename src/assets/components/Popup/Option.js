@@ -1,16 +1,40 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
-const Option = ({heading, pledge, left, description}) => {
+const Option = ({id, rewardId, setRewardId, 
+                heading, pledge, left, description}) => {
+
+  const handleClick= (e) => {
+    setRewardId(e.target.id);
+  }
+
+  useEffect(() => {
+    const containers = document.querySelectorAll(".option");
+    containers.forEach((container) => {
+        container.firstChild.id == rewardId?
+        container.classList.add("option--clicked"):
+        container.classList.remove("option--clicked");
+    });
+  });
+
   return (
-    <label className={left == "0"? "option option--out": "option"}>
-        <input type="radio" name="radio"/>
+    <label className={left == "0"? "option option--out": "option"} >
+        <input 
+        type="radio" 
+        name="radio" 
+        disabled={left=="0"} 
+        id={id}
+        onClick={handleClick}/>
         <span className="option__radio"></span>
         {
             pledge == "" ?
             <h4 className="option__header option__header--none">
                     {heading}
             </h4> : 
-            <div className="option__header option__header--pledge">
+            <div 
+            className={left == "0"?
+            "option__header option__header--pledge option__header--out":
+            "option__header option__header--pledge"
+            }>
                 <div className="option__header-container">
                     <h4 className="option__heading">
                         {heading} 
@@ -27,28 +51,33 @@ const Option = ({heading, pledge, left, description}) => {
         <p className="option__description">
             {description}
         </p>
-        <div className="payment">
-            <div className="payment__hline"></div>
-            <div className="payment__container">
-                <p className="payment__par">
-                    Enter your pledge
-                </p>
-                <form className="payment__form">
-                    <input type="text" className="payment__input" value="25"/>
-                    <button type="submit" className="payment__submit">
-                        Continue
-                    </button>
-                </form>
-            </div>
-        </div>
+        {
+            id == rewardId?
+            <div className="payment">
+                <div className="payment__hline"></div>
+                <div className="payment__container">
+                    <p className="payment__par">
+                        Enter your pledge
+                    </p>
+                    <form className="payment__form">
+                        <input type="text" className="payment__input" value={pledge}/>
+                        <button type="submit" className="payment__submit">
+                            Continue
+                        </button>
+                    </form>
+                </div>
+            </div>:
+            ''
+        }
     </label>
   )
 }
 
 Option.defaultProps = {
-    pledge: "",
+    pledge: "0",
     left: ""
 }
+
 export default Option
 
 

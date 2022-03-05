@@ -406,6 +406,9 @@
   /* Hide default radio button */
   /* Create custom radio button */
 }
+.option--clicked {
+  border-color: #3cb4ac;
+}
 .option > input {
   position: absolute;
   opacity: 0;
