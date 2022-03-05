@@ -104,9 +104,9 @@ const Support = () => {
                 </div>
             </label>
             <label className="option option--out">
-                <input type="radio" name="radio"/>
+                <input type="radio" name="radio" disabled/>
                 <span className="option__radio"></span>
-                <div className="option__header option__header--pledge">
+                <div className="option__header option__header--pledge option__header--out">
                     <div className="option__header-container">
                         <h4 className="option__heading">
                             Mahogany Special Stand

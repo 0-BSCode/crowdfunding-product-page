@@ -371,6 +371,7 @@
 
 /* SUPPORT POP-UP CARD */
 .support {
+    // opacity: 0;
     width: 48rem;
     margin: 0 auto;
     padding: 3rem 3.5rem;
@@ -457,6 +458,10 @@
     & input:hover ~ &__header--none,
     & input:hover ~ &__header--pledge > &__header-container > &__heading {
         color: colors.$moderate-cyan;
+    }
+
+    & input:hover ~ &__header--out > &__header-container > &__heading {
+        color: black;
     }
 
     & input:checked ~ &__radio {

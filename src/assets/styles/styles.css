@@ -435,6 +435,9 @@
 .option input:hover ~ .option__header--none, .option input:hover ~ .option__header--pledge > .option__header-container > .option__heading {
   color: #3cb4ac;
 }
+.option input:hover ~ .option__header--out > .option__header-container > .option__heading {
+  color: black;
+}
 .option input:checked ~ .option__radio {
   background-color: white;
 }
