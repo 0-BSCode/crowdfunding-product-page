@@ -1,39 +1,20 @@
 import React from 'react'
+import Stat from './Stat'
+import Tracker from './Tracker'
 
 const Progress = () => {
+  // Format amount function that adds comma in amount donated
+
   return (
     <section className="progress">
         <div className="progress__stats">
-            <div className="progress__stat">
-                <h2 className="progress__stat-head">
-                    $89,914
-                </h2>
-                <p className="progress__stat-subtitle">
-                    of $100,000 backed
-                </p>
-            </div>
-            <div className="progress__vline"></div>
-            <div className="progress__stat">
-                <h2 className="progress__stat-head">
-                    5,007
-                </h2>
-                <p className="progress__stat-subtitle">
-                    total backers
-                </p>
-            </div>
-            <div className="progress__vline"></div>
-            <div className="progress__stat">
-                <h2 className="progress__stat-head">
-                    56
-                </h2>
-                <p className="progress__stat-subtitle">
-                    days left
-                </p>
-            </div>
+            <Stat figure={"$"+"89,914"} description={"of $100,000 backed"} />
+            <div className="progress__vline" />
+            <Stat figure={"5007"} description={"total backers"} />
+            <div className="progress__vline" />
+            <Stat figure={"56"} description={"days left"} />
         </div>
-        <div className="progress__tracker">
-            <input type="range" min="1" max="100000" value="89914" className="progress__slider" />
-        </div>
+        <Tracker amount={89914} />
     </section>
   )
 }
