@@ -13,16 +13,9 @@ function App() {
       <Footer />
       {/* <div className="overlay"></div> */}
       {/* <Support /> */}
-      <Thanks />
+      {/* <Thanks /> */}
     </div>
   );
 }
 
 export default App;
-
-/*
-TO-DO
-1. Design desktop layout (w/o pop-ups yet)
-2. Figure out where to place the different states
-3. Rename some of the classes (card__ gets too repetitive)
-*/

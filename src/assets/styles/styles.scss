@@ -612,10 +612,10 @@
 .thanks {
     width: 35rem;
     height: 31rem;
-    position: absolute;
-    top: 30rem;
+    position: fixed;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, 0);
+    transform: translate(-50%, -50%);
     background-color: white;
     border: solid 0.1rem whitesmoke;
     border-radius: 0.7rem;
