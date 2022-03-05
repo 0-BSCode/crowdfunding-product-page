@@ -128,7 +128,7 @@
     }
 
     &__btn {
-        height: 3.3rem;
+        height: 3.5rem;
         width: 13rem;
         border: none;
         border-radius: 2rem;
@@ -148,7 +148,7 @@
     &__bookmark {
         display: inline-block;
         position: relative;
-        height: 3.3rem;
+        height: 3.5rem;
         width: 11rem;
 
         & input {
@@ -169,8 +169,8 @@
         &::before {
             position: absolute;
             content: "";
-            height: 3.3rem;
-            width: 3.3rem;
+            height: 3.5rem;
+            width: 3.5em;
             border-radius: 50%;
             background-image: url("../images/icon-bookmark.svg");
             background-size: cover;
