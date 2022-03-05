@@ -14,7 +14,7 @@ function App() {
     <div className="app">
       <Header 
       rewardId={rewardBtnId} 
-      setRewardId={setRewardBtnId}/>
+      setRewardId={setRewardBtnId} />
       <Main 
       rewardId={rewardBtnId} 
       setRewardId={setRewardBtnId} />
