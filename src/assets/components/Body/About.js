@@ -1,4 +1,5 @@
 import React from 'react'
+import Reward from './Reward'
 
 const About = () => {
   return (
@@ -15,72 +16,27 @@ const About = () => {
         to allow notepads, pens, and USB sticks to be stored under the stand.
         </p>
         <div className="about__rewards">
-            <div className="reward">
-                <div className="reward__title">
-                    <h4 className="reward__header">
-                        Bamboo Stand
-                    </h4>
-                    <p className="reward__criteria">
-                        Pledge $25 or more
-                    </p>
-                </div>
-                <div className="reward__description">
-                    You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and 
-                    you’ll be added to a special Backer member list.
-                </div>
-                <div className="reward__footer">
-                    <p className="reward__left">
-                        101 <span>left</span>
-                    </p>
-                    <button className="reward__select">
-                        Select Reward
-                    </button>
-                </div>
-            </div>
-            <div className="reward">
-                <div className="reward__title">
-                    <h4 className="reward__header">
-                        Black Edition Stand
-                    </h4>
-                    <p className="reward__criteria">
-                        Pledge $75 or more
-                    </p>
-                </div>
-                <div className="reward__description">
-                    You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer 
-                    member list. Shipping is included.
-                </div>
-                <div className="reward__footer">
-                    <p className="reward__left">
-                        64 <span>left</span>
-                    </p>
-                    <button className="reward__select">
-                        Select Reward
-                    </button>
-                </div>
-            </div>
-            <div className="reward reward--out">
-                <div className="reward__title">
-                    <h4 className="reward__header">
-                        Mahogany Special Edition
-                    </h4>
-                    <p className="reward__criteria">
-                        Pledge $200 or more
-                    </p>
-                </div>
-                <div className="reward__description">
-                    You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added 
-                    to our Backer member list. Shipping is included.
-                </div>
-                <div className="reward__footer">
-                    <p className="reward__left">
-                        0 <span>left</span>
-                    </p>
-                    <button className="reward__select">
-                        Out of Stock
-                    </button>
-                </div>
-            </div>
+            <Reward 
+            header="Bamboo Stand" 
+            criteria="25"
+            description="You get an ergonomic stand made of natural bamboo. You've 
+            helped us launch our promotional campaign, and you’ll be added to a special 
+            Backer member list."
+            left="101"/>
+            <Reward 
+            header="Black Edition Stand" 
+            criteria="75"
+            description="You get a Black Special Edition computer stand and a personal 
+            thank you. You’ll be added to our Backer member list. Shipping is included."
+            left="64"/>
+            <Reward 
+            header="Mahogany Special Edition" 
+            criteria="200"
+            description="You get two Special Edition Mahogany stands, a Backer T-Shirt, 
+            and a personal thank you. You’ll be added to our Backer member list. Shipping 
+            is included."
+            left="0"
+            out={true}/>
         </div>
     </section>
   )
