@@ -27,8 +27,4 @@ const Reward = ({header, criteria, description,
   )
 }
 
-Reward.defaultProps = {
-    out: false
-}
-
 export default Reward
