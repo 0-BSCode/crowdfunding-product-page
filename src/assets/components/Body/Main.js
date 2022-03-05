@@ -3,12 +3,14 @@ import Title from './Title'
 import Progress from './Progress'
 import About from './About'
 
-const Main = () => {
+const Main = ({rewardId, setRewardId}) => {
   return (
     <main className="container">
         <Title />
         <Progress />
-        <About />
+        <About 
+        rewardId={rewardId}
+        setRewardId={setRewardId} />
     </main>
   )
 }

@@ -4,12 +4,20 @@ import Main from './assets/components/Body/Main'
 import Footer from './assets/components/Footer/Footer'
 import Support from './assets/components/Popup/Support'
 import Thanks from './assets/components/Popup/Thanks'
+import {useState, useEffect} from 'react'
 
 function App() {
+
+  const [rewardBtnId, setRewardBtnId] = useState(-1);
+
   return (
     <div className="app">
-      <Header />
-      <Main />
+      <Header 
+      rewardId={rewardBtnId} 
+      setRewardId={setRewardBtnId}/>
+      <Main 
+      rewardId={rewardBtnId} 
+      setRewardId={setRewardBtnId} />
       <Footer />
       {/* <div className="overlay"></div> */}
       {/* <Support /> */}
