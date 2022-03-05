@@ -389,7 +389,8 @@
 }
 .support__options {
   display: grid;
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(4, -webkit-fit-content);
+  grid-template-rows: repeat(4, fit-content);
   grid-row-gap: 1.5rem;
 }
 
@@ -397,13 +398,13 @@
 .option {
   border: 0.1rem solid whitesmoke;
   border-radius: 0.8rem;
-  padding: 2.5rem 1.8rem;
+  padding: 2.5rem 1.8rem 1.3rem 1.8rem;
   position: relative;
   display: block;
   /* Hide default radio button */
   /* Create custom radio button */
 }
-.option input {
+.option > input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -512,6 +513,45 @@
 .payment__par {
   color: #7a7a7a;
   font-size: 0.95rem;
+}
+.payment__form {
+  position: relative;
+}
+.payment__form::after {
+  position: absolute;
+  content: "$";
+  top: 50%;
+  left: 1.5rem;
+  transform: translate(0%, -50%);
+  color: #7a7a7a;
+  font-family: CommissionerB;
+  opacity: 0.4;
+}
+.payment__input, .payment__submit {
+  height: 3.3rem;
+  width: 7rem;
+  border-radius: 1.8rem;
+  border: none;
+}
+.payment__input {
+  margin-right: 1rem;
+  border: solid 0.15rem whitesmoke;
+  text-align: center;
+  font-family: CommissionerB;
+  font-size: 0.9rem;
+  position: relative;
+}
+.payment__submit {
+  background-color: #3cb4ac;
+  color: white;
+  font-family: CommissionerSB;
+  letter-spacing: 0.01rem;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+.payment__submit:hover {
+  background-color: #147b74;
+  cursor: pointer;
 }
 
 .attribution {

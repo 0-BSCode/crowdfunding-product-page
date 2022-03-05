@@ -63,7 +63,7 @@ const Support = () => {
                         Enter your pledge
                     </p>
                     <form className="payment__form">
-                        <input type="text" className="payment__input"/>
+                        <input type="text" className="payment__input" value="25"/>
                         <button type="submit" className="payment__submit">
                             Continue
                         </button>
