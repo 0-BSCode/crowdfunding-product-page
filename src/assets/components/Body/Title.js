@@ -1,7 +1,12 @@
 import React from 'react'
 import logo from '../../images/logo-mastercraft.svg'
 
-const Title = () => {
+const Title = ({setRewardId}) => {
+
+  const handleClick = (e) => {
+      setRewardId(e.target.id)
+  }
+  
   return (
     <section className="title">
         <img className="title__logo" src={logo} alt="Mastercraft logo" />
@@ -13,7 +18,7 @@ const Title = () => {
         </p>
         <ul className="title__btn-list">
             <li className="title__btn-item">
-                <button className="title__btn">
+                <button id="0" className="title__btn" onClick={handleClick}>
                     Back this project
                 </button>
             </li>

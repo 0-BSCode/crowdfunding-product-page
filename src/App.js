@@ -10,17 +10,24 @@ function App() {
 
   const [rewardBtnId, setRewardBtnId] = useState(-1);
 
+  useEffect(() => {
+    console.log(rewardBtnId);
+  })
+
   return (
     <div className="app">
-      <Header 
-      rewardId={rewardBtnId} 
-      setRewardId={setRewardBtnId} />
-      <Main 
-      rewardId={rewardBtnId} 
+      <Header />
+      <Main
       setRewardId={setRewardBtnId} />
       <Footer />
-      {/* <div className="overlay"></div>
-      <Support /> */}
+      {
+        rewardBtnId != -1 ?
+        <>
+          <div className="overlay" />
+          <Support 
+          resetRewardId={setRewardBtnId} />
+        </>:''
+      }
       {/* <Thanks /> */}
     </div>
   );

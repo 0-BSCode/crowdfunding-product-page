@@ -1,7 +1,14 @@
 import React from 'react'
 
-const Reward = ({header, criteria, description,
-                 left}) => {
+const Reward = ({id, header, criteria, 
+                 description, left, setRewardId}) => {
+                     
+  const handleClick = e => {
+      setRewardId(e.target.id);
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }
+
   return (
     <div className={left == "0" ? "reward reward--out": "reward"}>
         <div className="reward__title">
@@ -19,7 +26,7 @@ const Reward = ({header, criteria, description,
             <p className="reward__left">
                 {left} <span>left</span>
             </p>
-            <button className="reward__select">
+            <button id={id} className="reward__select" onClick={handleClick}>
                 Select Reward
             </button>
         </div>

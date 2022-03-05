@@ -2,10 +2,13 @@ import React from 'react'
 import exit from '../../images/icon-close-modal.svg'
 import Option from './Option'
 
-const Support = () => {
+const Support = ({resetRewardId}) => {
+
+  const unshowPopup = () => resetRewardId(-1);
+
   return (
     <section className="support">
-        <button className="support__exit">
+        <button className="support__exit" onClick={unshowPopup}>
             <img className="support__exit-img" alt="Exit" src={exit} />
         </button>
         <h3 className="support__header">
