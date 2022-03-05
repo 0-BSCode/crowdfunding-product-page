@@ -24,18 +24,20 @@ const Support = () => {
                     Choose to support us without a reward if you simply believe in our project. As a backer, 
                     you will be signed up to receive product updates via email.
                 </p>
-                <div className="option__hline"></div>
                 <div className="payment">
-                    <p className="payment__par">
-                        Enter your pledge
-                    </p>
-                    <form className="payment__form">
-                        <input type="text" className="payment__input"/>
-                        <button type="submit" className="payment__submit">
-                            Continue
-                        </button>
-                    </form>
-                </div>
+                    <div className="payment__hline"></div>
+                    <div className="payment__container">
+                        <p className="payment__par">
+                            Enter your pledge
+                        </p>
+                        <form className="payment__form">
+                            <input type="text" className="payment__input"/>
+                            <button type="submit" className="payment__submit">
+                                Continue
+                            </button>
+                        </form>
+                    </div>
+                    </div>
             </label>
             <label className="option">
                 <input type="radio" name="radio" />
@@ -57,17 +59,19 @@ const Support = () => {
                     You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and
                     you’ll be added to a special Backer member list.
                 </p>
-                <div className="option__hline"></div>
                 <div className="payment">
-                    <p className="payment__par">
-                        Enter your pledge
-                    </p>
-                    <form className="payment__form">
-                        <input type="text" className="payment__input" value="25"/>
-                        <button type="submit" className="payment__submit">
-                            Continue
-                        </button>
-                    </form>
+                    <div className="payment__hline"></div>
+                    <div className="payment__container">
+                        <p className="payment__par">
+                            Enter your pledge
+                        </p>
+                        <form className="payment__form">
+                            <input type="text" className="payment__input" value="25"/>
+                            <button type="submit" className="payment__submit">
+                                Continue
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </label>
             <label className="option">
@@ -90,17 +94,19 @@ const Support = () => {
                     You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
                     member list. Shipping is included.
                 </p>
-                <div className="option__hline"></div>
                 <div className="payment">
-                    <p className="payment__par">
-                        Enter your pledge
-                    </p>
-                    <form className="payment__form">
-                        <input type="text" className="payment__input"/>
-                        <button type="submit" className="payment__submit">
-                            Continue
-                        </button>
-                    </form>
+                    <div className="payment__hline"></div>
+                    <div className="payment__container">
+                        <p className="payment__par">
+                            Enter your pledge
+                        </p>
+                        <form className="payment__form">
+                            <input type="text" className="payment__input"/>
+                            <button type="submit" className="payment__submit">
+                                Continue
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </label>
             <label className="option option--out">
@@ -123,17 +129,19 @@ const Support = () => {
                     You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
                     to our Backer member list. Shipping is included.
                 </p>
-                <div className="option__hline"></div>
                 <div className="payment">
-                    <p className="payment__par">
-                        Enter your pledge
-                    </p>
-                    <form className="payment__form">
-                        <input type="text" className="payment__input"/>
-                        <button type="submit" className="payment__submit">
-                            Continue
-                        </button>
-                    </form>
+                    <div className="payment__hline"></div>
+                    <div className="payment__container">
+                        <p className="payment__par">
+                            Enter your pledge
+                        </p>
+                        <form className="payment__form">
+                            <input type="text" className="payment__input"/>
+                            <button type="submit" className="payment__submit">
+                                Continue
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </label>
         </div>
