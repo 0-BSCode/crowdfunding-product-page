@@ -9,8 +9,10 @@ import {useState, useEffect} from 'react'
 function App() {
 
   const [rewardBtnId, setRewardBtnId] = useState(-1);
+  const [amount, setAmount] = useState(89914);
+  const [backers, setBackers] = useState(5007);
 
-  useEffect(() => {
+  useEffect(() => { 
     console.log(rewardBtnId);
   })
 
@@ -18,6 +20,8 @@ function App() {
     <div className="app">
       <Header />
       <Main
+      amount={amount}
+      backers={backers}
       setRewardId={setRewardBtnId} />
       <Footer />
       {
@@ -38,16 +42,12 @@ export default App;
 
 /*
 Stuff I need to keep track of
-1. If main's title card button was clicked
-  - Show support popup w/ nothing selected by default
-2. Progress stats
+1. Progress stats
   - Show amount given, number of backers, and days left (optional)
   - Range slider reflects amount donated
-3. If any reward button in above section is selected
-  - Show support popup w/ option corresponding to button clicked selected
-4. Number of each stand left
+2. Number of each stand left
   - Block out options if it's out of stock
-5. Amount donated
+3. Amount donated
   - Initial value in input = minimum pledge amount
   - Have thanks popup once submit button = clicked
 */
