@@ -547,11 +547,15 @@
 }
 .payment__input {
   margin-right: 1rem;
-  border: solid 0.15rem whitesmoke;
+  border: solid 0.1rem whitesmoke;
   text-align: center;
   font-family: CommissionerB;
   font-size: 0.9rem;
   position: relative;
+}
+.payment__input:focus {
+  outline: none;
+  border-color: #3cb4ac;
 }
 .payment__submit {
   background-color: #3cb4ac;

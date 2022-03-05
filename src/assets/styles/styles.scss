@@ -598,11 +598,16 @@
 
     &__input {
         margin-right: 1rem;
-        border: solid 0.15rem whitesmoke;
+        border: solid 0.1rem whitesmoke;
         text-align: center;
         font-family: CommissionerB;
         font-size: 0.9rem;
         position: relative;
+    }
+
+    &__input:focus {
+        outline: none;
+        border-color: colors.$moderate-cyan;
     }
 
     &__submit {
