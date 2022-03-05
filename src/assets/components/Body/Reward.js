@@ -1,9 +1,9 @@
 import React from 'react'
 
 const Reward = ({header, criteria, description,
-                 left, out}) => {
+                 left}) => {
   return (
-    <div className={out ? "reward reward--out": "reward"}>
+    <div className={left == "0" ? "reward reward--out": "reward"}>
         <div className="reward__title">
             <h4 className="reward__header">
                 {header}

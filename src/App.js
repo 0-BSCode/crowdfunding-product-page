@@ -19,8 +19,8 @@ function App() {
       rewardId={rewardBtnId} 
       setRewardId={setRewardBtnId} />
       <Footer />
-      <div className="overlay"></div>
-      <Support />
+      {/* <div className="overlay"></div>
+      <Support /> */}
       {/* <Thanks /> */}
     </div>
   );
