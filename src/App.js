@@ -54,12 +54,7 @@ export default App;
 
 /*
 Stuff I need to keep track of
-1. Progress stats
-  - Show amount given, number of backers, and days left (optional)
-  - Range slider reflects amount donated
-2. Number of each stand left
+1. Number of each stand left
   - Block out options if it's out of stock
-3. Amount donated
-  - Initial value in input = minimum pledge amount
-  - Have thanks popup once submit button = clicked
+2. 
 */
