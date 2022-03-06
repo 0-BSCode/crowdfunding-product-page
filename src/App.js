@@ -11,6 +11,7 @@ function App() {
   const [rewardBtnId, setRewardBtnId] = useState(-1);
   const [amount, setAmount] = useState(89914);
   const [backers, setBackers] = useState(5007);
+  const [showThanks, setShowThanks] = useState(false);
 
   useEffect(() => { 
     console.log(rewardBtnId);
@@ -30,10 +31,21 @@ function App() {
           <div className="overlay" />
           <Support 
           rewardId={rewardBtnId}
-          setRewardId={setRewardBtnId} />
+          setRewardId={setRewardBtnId}
+          amount={amount}
+          setAmount={setAmount}
+          backers={backers}
+          setBackers={setBackers}
+          setShowThanks={setShowThanks} />
         </>:''
       }
-      {/* <Thanks /> */}
+      {showThanks?
+       <>
+        <div className="overlay" />
+        <Thanks 
+        setShowThanks={setShowThanks} />
+       </>: ''
+      }
     </div>
   );
 }

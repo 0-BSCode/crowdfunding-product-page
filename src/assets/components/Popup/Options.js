@@ -1,7 +1,10 @@
 import React from 'react'
 import Option from './Option'
+import {useState, useEffect} from 'react'
 
-const Options = ({rewardId, setRewardId}) => {
+const Options = ({rewardId, setRewardId, 
+                  amount, setAmount, 
+                  backers, setBackers, setShowThanks}) => {
 
   return (
     <div className="support__options">
@@ -10,10 +13,15 @@ const Options = ({rewardId, setRewardId}) => {
         rewardId={rewardId}
         setRewardId={setRewardId}
         heading="Pledge with no reward"
-        pledge=""
+        pledge="0"
         description="Choose to support us without a reward if 
         you simply believe in our project. As a backer, you 
-        will be signed up to receive product updates via email." />
+        will be signed up to receive product updates via email." 
+        amount={amount}
+        setAmount={setAmount} 
+        backers={backers}
+        setBackers={setBackers} 
+        setShowThanks={setShowThanks} />
         <Option
         id="1"
         rewardId={rewardId}
@@ -23,7 +31,12 @@ const Options = ({rewardId, setRewardId}) => {
         left="101"
         description="You get an ergonomic stand made of natural 
         bamboo. You've helped us launch our promotional campaign, 
-        and you’ll be added to a special Backer member list." />
+        and you’ll be added to a special Backer member list." 
+        amount={amount}
+        setAmount={setAmount} 
+        backers={backers}
+        setBackers={setBackers}
+        setShowThanks={setShowThanks} />
         <Option
         id="2"
         rewardId={rewardId}
@@ -33,7 +46,12 @@ const Options = ({rewardId, setRewardId}) => {
         left="64"
         description="You get a Black Special Edition computer 
         stand and a personal thank you. You’ll be added to our 
-        Backer member list. Shipping is included." />
+        Backer member list. Shipping is included." 
+        amount={amount}
+        setAmount={setAmount} 
+        backers={backers}
+        setBackers={setBackers}
+        setShowThanks={setShowThanks} />
         <Option
         id="3"
         rewardId={rewardId}
@@ -43,7 +61,12 @@ const Options = ({rewardId, setRewardId}) => {
         left="0"
         description="You get two Special Edition Mahogany stands, 
         a Backer T-Shirt, and a personal thank you. You’ll be added
-        to our Backer member list. Shipping is included." />
+        to our Backer member list. Shipping is included." 
+        amount={amount}
+        setAmount={setAmount} 
+        backers={backers}
+        setBackers={setBackers}
+        setShowThanks={setShowThanks} />
     </div>
   )
 }

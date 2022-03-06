@@ -1,7 +1,11 @@
 import React from 'react'
 import check from '../../images/icon-check.svg'
 
-const Thanks = () => {
+const Thanks = ({setShowThanks}) => {
+  const handleClick = (e) => {
+    e.preventDefault();
+    setShowThanks(false);
+  }
   return (
     <section className="thanks">
         <img className="thanks__img" alt="Check Mark" src={check} />
@@ -10,7 +14,9 @@ const Thanks = () => {
             Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get
             an email once our campaign is completed.
         </p>
-        <button className="thanks__btn">
+        <button 
+        className="thanks__btn" 
+        onClick={handleClick}>
             Got it!
         </button>
     </section>

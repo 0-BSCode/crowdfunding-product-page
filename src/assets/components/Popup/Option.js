@@ -1,10 +1,25 @@
 import React, { useEffect } from 'react'
 
-const Option = ({id, rewardId, setRewardId, 
-                heading, pledge, left, description}) => {
+const Option = ({id, rewardId, setRewardId, heading, 
+                 pledge, left, description, amount,
+                setAmount, backers, setBackers, setShowThanks}) => {
 
   const handleClick= (e) => {
     setRewardId(e.target.id);
+  }
+  
+  const handleSubmission = (e) => {
+    e.preventDefault();
+    const input = document.querySelector(".payment__input");
+    // Do a check to see if amount is at least minimum pledge
+    if (input.value >= pledge) {
+        setAmount(amount+Number(input.value));
+        setBackers(backers+1);
+        setRewardId(-1);
+        setShowThanks(true);
+    } else {
+        input.style.borderColor = "salmon";
+    }
   }
 
   useEffect(() => {
@@ -37,7 +52,7 @@ const Option = ({id, rewardId, setRewardId,
         onClick={handleClick}/>
         <span className="option__radio"></span>
         {
-            pledge == "" ?
+            pledge == "0" ?
             <h4 className="option__header option__header--none">
                     {heading}
             </h4> : 
@@ -70,9 +85,18 @@ const Option = ({id, rewardId, setRewardId,
                     <p className="payment__par">
                         Enter your pledge
                     </p>
-                    <form className="payment__form">
-                        <input type="text" className="payment__input" value={pledge}/>
-                        <button type="submit" className="payment__submit">
+                    <form 
+                    formid={id}
+                    className="payment__form"
+                    onSubmit={handleSubmission}>
+                        <input 
+                        inputid={id}
+                        type="text" 
+                        className="payment__input" 
+                        placeholder={pledge}/>
+                        <button 
+                        type="submit" 
+                        className="payment__submit">
                             Continue
                         </button>
                     </form>

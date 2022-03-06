@@ -2,7 +2,9 @@ import React from 'react'
 import exit from '../../images/icon-close-modal.svg'
 import Options from './Options'
 
-const Support = ({rewardId, setRewardId}) => {
+const Support = ({rewardId, setRewardId, 
+                  amount, setAmount, 
+                  backers, setBackers, setShowThanks}) => {
 
   const unshowPopup = () => setRewardId(-1);
 
@@ -19,7 +21,12 @@ const Support = ({rewardId, setRewardId}) => {
         </p>
         <Options 
         rewardId={rewardId}
-        setRewardId={setRewardId}/>
+        setRewardId={setRewardId} 
+        amount={amount}
+        setAmount={setAmount}
+        backers={backers}
+        setBackers={setBackers}
+        setShowThanks={setShowThanks} />
     </section>
   )
 }
