@@ -10,6 +10,8 @@ const Option = ({id, rewardId, setRewardId, heading,
   
   const handleSubmission = (e) => {
     e.preventDefault();
+
+    // Only selects one element
     const input = document.querySelector(".payment__input");
     // Do a check to see if amount is at least minimum pledge
     if (input.value >= pledge) {
@@ -26,6 +28,7 @@ const Option = ({id, rewardId, setRewardId, heading,
     // Make radio button clicked when corresponding reward 
     // button is clicked
     const buttons = document.querySelectorAll(".option__radio");
+    console.log(buttons);
     buttons.forEach(button => {
         if (button.id == rewardId) {
             button.checked = true;
