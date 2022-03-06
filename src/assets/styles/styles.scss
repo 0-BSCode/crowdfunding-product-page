@@ -423,6 +423,10 @@
     position: relative;
     display: block;
 
+    &:hover {
+        cursor: pointer;
+    }
+
     &--clicked {
         border-color: colors.$moderate-cyan;
     }
@@ -478,6 +482,11 @@
     }
 
     &--out {
+
+        &:hover {
+            cursor: default;
+        }
+
         &::after {
             content: "";
             position: absolute;

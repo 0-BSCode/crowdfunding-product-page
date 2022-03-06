@@ -405,6 +405,9 @@
   /* Hide default radio button */
   /* Create custom radio button */
 }
+.option:hover {
+  cursor: pointer;
+}
 .option--clicked {
   border-color: #3cb4ac;
 }
@@ -447,6 +450,9 @@
 }
 .option input:checked ~ .option__radio::after {
   display: block;
+}
+.option--out:hover {
+  cursor: default;
 }
 .option--out::after {
   content: "";
