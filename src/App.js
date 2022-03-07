@@ -51,10 +51,3 @@ function App() {
 }
 
 export default App;
-
-/*
-Stuff I need to keep track of
-1. Number of each stand left
-  - Block out options if it's out of stock
-2. 
-*/
