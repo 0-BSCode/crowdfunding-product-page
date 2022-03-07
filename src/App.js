@@ -12,9 +12,10 @@ function App() {
   const [amount, setAmount] = useState(89914);
   const [backers, setBackers] = useState(5007);
   const [showThanks, setShowThanks] = useState(false);
+  const [stocks, setStocks] = useState({Bamboo: 101, Black: 64, Mahogany: 0})
 
   useEffect(() => { 
-    console.log(rewardBtnId);
+    console.log(stocks);
   })
 
   return (
@@ -23,6 +24,7 @@ function App() {
       <Main
       amount={amount}
       backers={backers}
+      stocks={stocks}
       setRewardId={setRewardBtnId} />
       <Footer />
       {
@@ -36,6 +38,8 @@ function App() {
           setAmount={setAmount}
           backers={backers}
           setBackers={setBackers}
+          stocks={stocks}
+          setStocks={setStocks}
           setShowThanks={setShowThanks} />
         </>:''
       }

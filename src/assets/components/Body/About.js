@@ -1,7 +1,7 @@
 import React from 'react'
 import Reward from './Reward'
 
-const About = ({setRewardId}) => {
+const About = ({setRewardId, stocks}) => {
   return (
     <section className="about">
         <h3 className="about__heading">
@@ -23,7 +23,7 @@ const About = ({setRewardId}) => {
             description="You get an ergonomic stand made of natural bamboo. You've 
             helped us launch our promotional campaign, and you’ll be added to a special 
             Backer member list."
-            left="101"
+            left={stocks["Bamboo"]}
             setRewardId={setRewardId} />
             <Reward 
             id="2"
@@ -31,7 +31,7 @@ const About = ({setRewardId}) => {
             criteria="75"
             description="You get a Black Special Edition computer stand and a personal 
             thank you. You’ll be added to our Backer member list. Shipping is included."
-            left="64" 
+            left={stocks["Black"]}
             setRewardId={setRewardId} />
             <Reward 
             id="3"
@@ -40,7 +40,7 @@ const About = ({setRewardId}) => {
             description="You get two Special Edition Mahogany stands, a Backer T-Shirt, 
             and a personal thank you. You’ll be added to our Backer member list. Shipping 
             is included."
-            left="0" 
+            left={stocks["Mahogany"]}
             setRewardId={setRewardId} />
         </div>
     </section>

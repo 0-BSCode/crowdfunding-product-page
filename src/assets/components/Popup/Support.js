@@ -4,7 +4,8 @@ import Options from './Options'
 
 const Support = ({rewardId, setRewardId, 
                   amount, setAmount, 
-                  backers, setBackers, setShowThanks}) => {
+                  backers, setBackers,
+                  stocks, setStocks, setShowThanks}) => {
 
   const unshowPopup = () => setRewardId(-1);
 
@@ -26,6 +27,8 @@ const Support = ({rewardId, setRewardId,
         setAmount={setAmount}
         backers={backers}
         setBackers={setBackers}
+        stocks={stocks}
+        setStocks={setStocks}
         setShowThanks={setShowThanks} />
     </section>
   )

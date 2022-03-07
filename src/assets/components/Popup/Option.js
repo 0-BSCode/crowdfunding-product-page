@@ -2,7 +2,8 @@ import React, { useEffect } from 'react'
 
 const Option = ({id, rewardId, setRewardId, heading, 
                  pledge, left, description, amount,
-                setAmount, backers, setBackers, setShowThanks}) => {
+                setAmount, backers, setBackers, 
+                stocks, setStocks, setShowThanks}) => {
 
   const handleClick= (e) => {
     setRewardId(e.target.id);
@@ -13,22 +14,30 @@ const Option = ({id, rewardId, setRewardId, heading,
 
     // Only selects one element
     const input = document.querySelector(".payment__input");
+    console.log("Value: ", input.value);
+    console.log("Pledge: ", pledge);
+
     // Do a check to see if amount is at least minimum pledge
     if (input.value >= pledge) {
+        console.log("TRANSACTION COMPLETED");
         setAmount(amount+Number(input.value));
         setBackers(backers+1);
         setRewardId(-1);
         setShowThanks(true);
+        
+        // Decrease stock
+        let key = Object.keys(stocks)[id-1];
+        setStocks({...stocks, [key]: stocks[key]-1});
     } else {
         input.style.borderColor = "salmon";
     }
   }
 
   useEffect(() => {
+
     // Make radio button clicked when corresponding reward 
     // button is clicked
     const buttons = document.querySelectorAll(".option__radio");
-    console.log(buttons);
     buttons.forEach(button => {
         if (button.id == rewardId) {
             button.checked = true;
@@ -89,11 +98,9 @@ const Option = ({id, rewardId, setRewardId, heading,
                         Enter your pledge
                     </p>
                     <form 
-                    formid={id}
                     className="payment__form"
                     onSubmit={handleSubmission}>
                         <input 
-                        inputid={id}
                         type="text" 
                         className="payment__input" 
                         placeholder={pledge}/>

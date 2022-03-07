@@ -4,7 +4,23 @@ import {useState, useEffect} from 'react'
 
 const Options = ({rewardId, setRewardId, 
                   amount, setAmount, 
-                  backers, setBackers, setShowThanks}) => {
+                  backers, setBackers, 
+                  stocks, setStocks, setShowThanks}) => {
+  // useEffect(()=>{
+  //   const options = document.querySelectorAll(".option__radio");
+
+  //   console.log("OPTIONS: ", options);
+  
+  //   options.forEach((option) => {
+  //     option.addEventListener("click", () => {
+  //       let optionId = option.id;
+  //       console.log("ID: ", optionId);
+  //       let key = Object.keys(stocks)[optionId]
+  //       console.log("KEYS: ", Object.keys(stocks)[0]);
+  //       setStocks({...stocks, key: stocks[key]-1});
+  //   })})
+  
+  // });
 
   return (
     <div className="support__options">
@@ -21,6 +37,8 @@ const Options = ({rewardId, setRewardId,
         setAmount={setAmount} 
         backers={backers}
         setBackers={setBackers} 
+        stocks={stocks}
+        setStocks={setStocks}
         setShowThanks={setShowThanks} />
         <Option
         id="1"
@@ -28,7 +46,7 @@ const Options = ({rewardId, setRewardId,
         setRewardId={setRewardId}
         heading="Bamboo Stand"
         pledge="25"
-        left="101"
+        left={stocks["Bamboo"]}
         description="You get an ergonomic stand made of natural 
         bamboo. You've helped us launch our promotional campaign, 
         and you’ll be added to a special Backer member list." 
@@ -36,6 +54,8 @@ const Options = ({rewardId, setRewardId,
         setAmount={setAmount} 
         backers={backers}
         setBackers={setBackers}
+        stocks={stocks}
+        setStocks={setStocks}
         setShowThanks={setShowThanks} />
         <Option
         id="2"
@@ -43,7 +63,7 @@ const Options = ({rewardId, setRewardId,
         setRewardId={setRewardId}
         heading="Black Edition Stand"
         pledge="75"
-        left="64"
+        left={stocks["Black"]}
         description="You get a Black Special Edition computer 
         stand and a personal thank you. You’ll be added to our 
         Backer member list. Shipping is included." 
@@ -51,6 +71,8 @@ const Options = ({rewardId, setRewardId,
         setAmount={setAmount} 
         backers={backers}
         setBackers={setBackers}
+        stocks={stocks}
+        setStocks={setStocks}
         setShowThanks={setShowThanks} />
         <Option
         id="3"
@@ -58,7 +80,7 @@ const Options = ({rewardId, setRewardId,
         setRewardId={setRewardId}
         heading="Mahogany Special Stand"
         pledge="200"
-        left="0"
+        left={stocks["Mahogany"]}
         description="You get two Special Edition Mahogany stands, 
         a Backer T-Shirt, and a personal thank you. You’ll be added
         to our Backer member list. Shipping is included." 
@@ -66,6 +88,8 @@ const Options = ({rewardId, setRewardId,
         setAmount={setAmount} 
         backers={backers}
         setBackers={setBackers}
+        stocks={stocks}
+        setStocks={setStocks}
         setShowThanks={setShowThanks} />
     </div>
   )
