@@ -1,6 +1,5 @@
 import React from 'react'
 import Option from './Option'
-import {useState, useEffect} from 'react'
 
 const Options = ({rewardId, setRewardId, 
                   amount, setAmount, 
