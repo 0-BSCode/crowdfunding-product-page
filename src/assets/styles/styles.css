@@ -88,7 +88,7 @@
   padding-left: 2rem;
   color: white;
   font-size: 0.9rem;
-  font-family: CommissionerB;
+  font-family: CommissionerM;
 }
 .header__link a {
   z-index: 1;
@@ -645,7 +645,7 @@
 .footer a {
   color: #3cb4ac;
   transition: all 0.2s;
-  font-family: CommissionerSB;
+  font-family: CommissionerM;
   text-decoration: underline;
 }
 .footer a:hover {

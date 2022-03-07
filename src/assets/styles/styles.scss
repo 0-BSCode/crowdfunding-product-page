@@ -58,7 +58,7 @@
         padding-left: 2rem;
         color: white;
         font-size: 0.9rem;
-        font-family: CommissionerB;
+        font-family: CommissionerM;
     }
 
     &__link a {
@@ -708,7 +708,7 @@
     & a {
         color: colors.$moderate-cyan;
         transition: all 0.2s;
-        font-family: CommissionerSB;
+        font-family: CommissionerM;
         text-decoration: underline;
 
         &:hover {
