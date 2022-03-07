@@ -4,7 +4,7 @@ import Main from './assets/components/Body/Main'
 import Footer from './assets/components/Footer/Footer'
 import Support from './assets/components/Popup/Support'
 import Thanks from './assets/components/Popup/Thanks'
-import {useState, useEffect} from 'react'
+import {useState} from 'react'
 
 function App() {
 
@@ -13,10 +13,6 @@ function App() {
   const [backers, setBackers] = useState(5007);
   const [showThanks, setShowThanks] = useState(false);
   const [stocks, setStocks] = useState({Bamboo: 101, Black: 64, Mahogany: 0})
-
-  useEffect(() => { 
-    console.log(stocks);
-  })
 
   return (
     <div className="app">
