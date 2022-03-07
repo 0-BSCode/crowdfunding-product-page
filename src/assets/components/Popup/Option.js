@@ -14,12 +14,9 @@ const Option = ({id, rewardId, setRewardId, heading,
 
     // Only selects one element
     const input = document.querySelector(".payment__input");
-    console.log("Value: ", input.value);
-    console.log("Pledge: ", pledge);
 
     // Do a check to see if amount is at least minimum pledge
     if (input.value >= pledge) {
-        console.log("TRANSACTION COMPLETED");
         setAmount(amount+Number(input.value));
         setBackers(backers+1);
         setRewardId(-1);

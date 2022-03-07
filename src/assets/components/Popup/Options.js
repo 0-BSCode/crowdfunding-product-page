@@ -6,21 +6,6 @@ const Options = ({rewardId, setRewardId,
                   amount, setAmount, 
                   backers, setBackers, 
                   stocks, setStocks, setShowThanks}) => {
-  // useEffect(()=>{
-  //   const options = document.querySelectorAll(".option__radio");
-
-  //   console.log("OPTIONS: ", options);
-  
-  //   options.forEach((option) => {
-  //     option.addEventListener("click", () => {
-  //       let optionId = option.id;
-  //       console.log("ID: ", optionId);
-  //       let key = Object.keys(stocks)[optionId]
-  //       console.log("KEYS: ", Object.keys(stocks)[0]);
-  //       setStocks({...stocks, key: stocks[key]-1});
-  //   })})
-  
-  // });
 
   return (
     <div className="support__options">
