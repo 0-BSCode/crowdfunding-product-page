@@ -12,7 +12,7 @@ const Progress = ({amount, backers}) => {
     for (let i=num.length - 1; i >= 0; i--) {
       if (ctr == 3) {
         result += `,${num[i]}`;
-        ctr = 0;
+        ctr = 1;
       } else {
         result += num[i];
         ctr++;
