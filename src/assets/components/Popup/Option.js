@@ -4,19 +4,20 @@ const Option = ({id, rewardId, setRewardId, heading,
                  pledge, left, description, amount,
                 setAmount, backers, setBackers, 
                 stocks, setStocks, setShowThanks}) => {
-
-  const handleClick= (e) => {
-    setRewardId(e.target.id);
-  }
+    
   
-  const handleSubmission = (e) => {
-    e.preventDefault();
+    const handleClick= (e) => {
+        setRewardId(e.target.id);
+    }
+  
+    const handleSubmission = (e) => {
+        e.preventDefault();
 
     // Only selects one element
     const input = document.querySelector(".payment__input");
 
     // Do a check to see if amount is at least minimum pledge
-    if (input.value >= pledge) {
+    if (Number(input.value) >= pledge) {
         setAmount(amount+Number(input.value));
         setBackers(backers+1);
         setRewardId(-1);
@@ -31,7 +32,6 @@ const Option = ({id, rewardId, setRewardId, heading,
   }
 
   useEffect(() => {
-
     // Make radio button clicked when corresponding reward 
     // button is clicked
     const buttons = document.querySelectorAll(".option__radio");
@@ -58,7 +58,7 @@ const Option = ({id, rewardId, setRewardId, heading,
         name="radio" 
         disabled={left=="0"} 
         id={id}
-        onClick={handleClick}/>
+        onClick={handleClick} />
         <span className="option__radio"></span>
         {
             pledge == "0" ?
