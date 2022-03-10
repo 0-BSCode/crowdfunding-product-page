@@ -1,6 +1,7 @@
 import React from 'react'
 import logo from '../../images/logo.svg'
 import Link from './Link'
+import Menu from './Menu'
 
 const Navbar = () => {
   return (
@@ -11,6 +12,7 @@ const Navbar = () => {
             <Link content="Discover" />
             <Link content="Get Started" />
         </ul>
+        <Menu />
     </nav>
   )
 }
