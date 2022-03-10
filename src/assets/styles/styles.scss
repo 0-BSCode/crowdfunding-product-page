@@ -27,6 +27,7 @@
     top: 0;
     left: 0;
     background-color: rgba(0,0,0,0.5);
+    z-index: 1;
 }
 
 /*---- HEADER -----*/
@@ -46,7 +47,7 @@
         height: 40%;
         width: 100%;
         background: linear-gradient(rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 100%);
-        z-index: 1;
+        z-index: 0;
     }
     
     &__navbar {
@@ -54,12 +55,21 @@
         display: flex;
         justify-content: space-between;
         padding: 3rem 11rem;
-        z-index: 2;
+        z-index: 1;
     }
 
     &__logo,
     &__links {
         display: inline;
+    }
+
+    &__menu {
+        display: none;
+        width: 2.5rem;
+    }
+
+    &__menu-links {
+        display: none;
     }
 
     &__link {
@@ -384,7 +394,6 @@
 
 /* SUPPORT POP-UP CARD */
 .support {
-    // opacity: 0;
     width: 48rem;
     margin: 0 auto;
     padding: 3rem 3.5rem;
@@ -392,6 +401,7 @@
     border-radius: 0.8rem;
     background-color: white;
     position: absolute;
+    z-index: 2;
     top: 12rem;
     left: 50%;
     transform: translate(-50%, 0%);
@@ -650,6 +660,7 @@
     width: 35rem;
     height: 31rem;
     position: fixed;
+    z-index: 2;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -748,5 +759,41 @@
 
     .header {
         background-image: url("../images/image-hero-mobile.jpg");
+        height: 37rem;
+
+        &__navbar {
+            padding-inline: 3rem;
+            padding-top: 4rem;
+        }
+
+        &__logo {
+            width: 15rem;
+        }
+
+        &__links {
+            display: none;
+        }
+
+        &__menu {
+            display: inline;
+        }
+
+        &__menu-links {
+            display: none;
+        }
+
+        &__menu-links--visible {
+            display: block !important;
+            position: absolute;
+            background-color: white;
+            width: 87.5%;
+            margin: auto;
+            color: black;
+        }
+    }
+
+    .container {
+        width: 40rem;
+        height: 143rem;
     }
 }
