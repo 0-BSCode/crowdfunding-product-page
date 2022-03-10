@@ -38,14 +38,23 @@
     background-size: cover;
     background-position: top center;
     height: 26rem;
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 40%;
+        width: 100%;
+        background: linear-gradient(rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 100%);
+        z-index: 1;
+    }
     
     &__navbar {
+        position: relative;
         display: flex;
         justify-content: space-between;
         padding: 3rem 11rem;
         z-index: 2;
-        background: linear-gradient(rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%);
-
     }
 
     &__logo,
@@ -715,5 +724,29 @@
             color: colors.$dark-cyan;
             cursor: pointer;
         }
+    }
+}
+
+
+/*----- MEDIA QUERIES -----*/
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+    :root {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    :root {
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 512px) and (max-width: 767px) {
+    :root {
+        font-size: 11px;
+    }
+
+    .header {
+        background-image: url("../images/image-hero-mobile.jpg");
     }
 }
