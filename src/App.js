@@ -4,10 +4,13 @@ import Main from './assets/components/Body/Main'
 import Footer from './assets/components/Footer/Footer'
 import Support from './assets/components/Popup/Support'
 import Thanks from './assets/components/Popup/Thanks'
+import Link from './assets/components/Header/Link'
+import Menu from './assets/components/Header/Menu'
 import {useState} from 'react'
 
 function App() {
 
+  const [showMenu, setShowMenu] = useState(false);
   const [rewardBtnId, setRewardBtnId] = useState(-1);
   const [amount, setAmount] = useState(89914);
   const [backers, setBackers] = useState(5007);
@@ -16,7 +19,9 @@ function App() {
 
   return (
     <div className="app">
-      <Header />
+      <Header 
+      showMenu={showMenu}
+      setShowMenu={setShowMenu} />
       <Main
       amount={amount}
       backers={backers}
@@ -45,6 +50,12 @@ function App() {
         <Thanks 
         setShowThanks={setShowThanks} />
        </>: ''
+      }
+      {showMenu?
+        <>
+          <div className="overlay" />
+          <Menu />
+        </>: ''
       }
     </div>
   );

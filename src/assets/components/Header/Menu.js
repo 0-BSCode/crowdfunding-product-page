@@ -4,25 +4,14 @@ import hamburger from '../../images/icon-hamburger.svg'
 
 const Menu = () => {
 
-  const showMenu = () => {
-    const mobileMenu = document.querySelector(".header__menu-links");
-    mobileMenu.classList.toggle("header__menu-links--visible");
-    console.log(mobileMenu);
-  }
-
   return (
-    <>
-        <img 
-        className="header__menu" 
-        src={hamburger} 
-        alt="Hamburger menu"
-        onClick={showMenu} />
-        <div className="header__menu-links">
-            <Link content="About" />
-            <Link content="Discover" />
-            <Link content="Get Started" />
-        </div>
-    </>
+    <div className="header__menu-links">
+      <Link content="About" />
+      <div className="header__hline" />
+      <Link content="Discover" />
+      <div className="header__hline" />
+      <Link content="Get Started" />
+    </div>
 
   )
 }
