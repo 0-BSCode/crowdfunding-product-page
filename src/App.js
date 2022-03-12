@@ -53,7 +53,7 @@ function App() {
       }
       {showMenu?
         <>
-          <div className="overlay" />
+          <div className="overlay header__menu-overlay" />
           <Menu />
         </>: ''
       }

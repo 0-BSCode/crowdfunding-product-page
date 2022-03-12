@@ -99,6 +99,9 @@
   width: 2.5rem;
   height: 2.5rem;
 }
+.header__menu-overlay {
+  background: linear-gradient(rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0) 30%);
+}
 .header__menu-links {
   position: absolute;
   top: 11rem;
@@ -738,5 +741,6 @@
   .container {
     width: 40rem;
     height: 143rem;
+    grid-template-rows: 12fr 17.6fr 70.4fr;
   }
 }/*# sourceMappingURL=styles.css.map */
