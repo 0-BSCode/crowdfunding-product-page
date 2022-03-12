@@ -83,7 +83,7 @@
         width: 87.5%;
         height: 21rem;
         border-radius: 1rem;
-        z-index: 1;
+        z-index: 2;
         display: grid;
         grid-template-rows: 10fr 1fr 10fr 1fr 10fr;
 
@@ -790,7 +790,7 @@
     }
 
     .app {
-        height: 315rem;
+        height: 320rem;
     }
 
     .header {
@@ -822,7 +822,7 @@
 
     .container {
         width: 40rem;
-        height: 280rem;
+        height: 287rem;
         grid-template-rows: 12fr 17.6fr 70.4fr;
         grid-row-gap: 3rem;
         top: -7rem;
@@ -973,7 +973,7 @@
 
         &__left {
             font-size: 4rem;
-            margin-bottom: 2.5rem;
+            margin-bottom: 3rem;
         }
 
         &__left span {
