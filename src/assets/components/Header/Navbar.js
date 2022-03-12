@@ -1,14 +1,20 @@
 import React from 'react'
 import logo from '../../images/logo.svg'
 import Link from './Link'
-import Menu from './Menu'
 import hamburger from '../../images/icon-hamburger.svg'
+import close from '../../images/icon-close-menu.svg'
 
 const Navbar = ({showMenu, setShowMenu}) => {
 
-  const handleClick = () => {
-    if (showMenu) setShowMenu(false);
-    else setShowMenu(true);
+  const handleClick = (e) => {
+    if (showMenu) {
+      setShowMenu(false);
+      e.target.setAttribute('src', hamburger);
+    }
+    else {
+      setShowMenu(true);
+      e.target.setAttribute('src', close);
+    }
   }
 
   return (
