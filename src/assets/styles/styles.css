@@ -792,4 +792,35 @@
   .title__bookmark input:checked + .title__toggle::after {
     content: "";
   }
+
+  .progress {
+    padding: 4rem 3rem 4.5rem 3rem;
+  }
+  .progress__stats {
+    grid-template-columns: 1fr;
+    grid-template-rows: 5fr 2.5fr 5fr 2.5fr 5fr;
+    place-items: center;
+  }
+  .progress__stat-head {
+    font-size: 4rem;
+    text-align: center;
+  }
+  .progress__stat-subtitle {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 1.75rem;
+  }
+  .progress__vline {
+    height: 0.25rem;
+    width: 10rem;
+    margin-left: 0;
+    margin: 2.1rem 0rem;
+  }
+  .progress__tracker {
+    margin-top: 4rem;
+  }
+  .progress__slider {
+    height: 1.5rem;
+    border-radius: 3rem;
+  }
 }/*# sourceMappingURL=styles.css.map */

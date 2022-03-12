@@ -884,4 +884,41 @@
             content: "";
         }
     }
+
+    .progress {
+        padding: 4rem 3rem 4.5rem 3rem;
+
+        &__stats {
+            grid-template-columns: 1fr;
+            grid-template-rows: 5fr 2.5fr 5fr 2.5fr 5fr;
+            place-items: center;
+        }
+
+        &__stat-head {
+            font-size: 4rem;
+            text-align: center;
+        }
+
+        &__stat-subtitle {
+            margin-top: 1rem;
+            text-align: center;
+            font-size: 1.75rem;
+        }
+
+        &__vline {
+            height: 0.25rem;
+            width: 10rem;
+            margin-left: 0;
+            margin: 2.1rem 0rem;
+        }
+
+        &__tracker {
+            margin-top: 4rem;
+        }
+
+        &__slider {
+            height: 1.5rem;
+            border-radius: 3rem;
+        }
+    }
 }
