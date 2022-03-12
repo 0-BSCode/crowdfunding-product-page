@@ -789,6 +789,10 @@
         font-size: 11px;
     }
 
+    .app {
+        height: 315rem;
+    }
+
     .header {
         background-image: url("../images/image-hero-mobile.jpg");
         height: 37rem;
@@ -818,7 +822,7 @@
 
     .container {
         width: 40rem;
-        height: 143rem;
+        height: 280rem;
         grid-template-rows: 12fr 17.6fr 70.4fr;
         grid-row-gap: 3rem;
         top: -7rem;
@@ -921,5 +925,72 @@
             height: 1.5rem;
             border-radius: 3rem;
         }
+    }
+
+    .about {
+        padding: 4rem 3rem;
+
+        &__heading {
+            font-size: 2.2rem;
+        }
+
+        &__description {
+            font-size: 1.68rem;
+            line-height: 3rem;
+            margin-top: 3rem;
+            margin-bottom: 4rem;
+        }
+    }
+
+    .reward {
+        padding: 3rem 2.5rem;
+        
+        &__title {
+            flex-direction: column;
+            align-items: start;
+        }
+
+        &__header {
+            font-size: 1.8rem;
+        }
+
+        &__criteria {
+            font-size: 1.7rem;
+            margin-top: 0.6rem;
+        }
+
+        &__description {
+            font-size: 1.7rem;
+            text-align: start;
+            line-height: 2.9rem;
+            margin-top: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        &__footer {
+            flex-direction: column;
+        }
+
+        &__left {
+            font-size: 4rem;
+            margin-bottom: 2.5rem;
+        }
+
+        &__left span {
+            font-size: 2rem;
+            bottom: 0.7rem;
+        }
+
+        &__select {
+            height: 6rem;
+            width: 20rem;
+            border-radius: 5rem;
+            font-size: 1.6rem;
+        }
+    }
+
+    .support {
+        width: 40rem;
+        top: 15rem;
     }
 }
