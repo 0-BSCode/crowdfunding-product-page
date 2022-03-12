@@ -742,6 +742,7 @@
     width: 40rem;
     height: 143rem;
     grid-template-rows: 12fr 17.6fr 70.4fr;
+    grid-row-gap: 3rem;
     top: -7rem;
   }
 
