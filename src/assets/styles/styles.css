@@ -742,5 +742,54 @@
     width: 40rem;
     height: 143rem;
     grid-template-rows: 12fr 17.6fr 70.4fr;
+    top: -7rem;
+  }
+
+  .title {
+    padding-top: 5.5rem;
+    padding-bottom: 4.5rem;
+  }
+  .title__logo {
+    top: -3.5rem;
+    width: 6.5rem;
+    height: 6.5rem;
+  }
+  .title__heading, .title__subheading {
+    text-align: center;
+  }
+  .title__heading {
+    font-size: 2.55rem;
+  }
+  .title__subheading {
+    padding-top: 2rem;
+    font-size: 1.7rem;
+    line-height: 2.8rem;
+  }
+  .title__btn-list {
+    padding-top: 3rem;
+  }
+  .title__btn, .title__bookmark {
+    height: 6rem;
+  }
+  .title__btn {
+    width: 25.5rem;
+    border-radius: 5rem;
+    font-size: 1.5rem;
+  }
+  .title__bookmark {
+    width: 6rem;
+  }
+  .title__toggle {
+    border-radius: 50%;
+  }
+  .title__toggle::before {
+    width: 6rem;
+    height: 6rem;
+  }
+  .title__toggle::after {
+    content: "";
+  }
+  .title__bookmark input:checked + .title__toggle::after {
+    content: "";
   }
 }/*# sourceMappingURL=styles.css.map */

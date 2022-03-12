@@ -820,5 +820,68 @@
         width: 40rem;
         height: 143rem;
         grid-template-rows: 12fr 17.6fr 70.4fr;
+        top: -7rem;
+    }
+
+    .title {
+        padding-top: 5.5rem;
+        padding-bottom: 4.5rem;
+
+        &__logo {
+            top: -3.5rem;
+            width: 6.5rem;
+            height: 6.5rem;
+        }
+
+        &__heading,
+        &__subheading {
+            text-align: center;
+        }
+
+        &__heading {
+            font-size: 2.55rem;
+        }
+
+        &__subheading {
+            padding-top: 2rem;
+            font-size: 1.7rem;
+            line-height: 2.8rem;
+        }
+
+        &__btn-list {
+            padding-top: 3rem;
+        }
+
+        &__btn,
+        &__bookmark {
+            height: 6rem;
+        }
+
+        &__btn {
+            width: 25.5rem;
+            border-radius: 5rem;
+            font-size: 1.5rem;
+        }
+
+        &__bookmark {
+            width: 6rem;
+        }
+
+        &__toggle {
+            border-radius: 50%;
+
+            &::before {
+                width: 6rem;
+                height: 6rem;
+            }
+
+            &::after {
+                content: "";
+            }
+        }
+
+        &__bookmark input:checked + &__toggle::after {
+            content: "";
+        }
     }
 }
