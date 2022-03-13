@@ -1052,14 +1052,15 @@
         padding-inline: 3rem;
         padding-top: 4rem;
         padding-bottom: 3.3rem;
-        border-color: colors.$dark-gray;
+        border-color: colors.$mobile-dark-gray;
         border-radius: 1rem;
+        margin-top: 3rem;
 
         &__radio {
             width: 2.8rem;
             height: 2.8rem;
             border-width: 0.1rem;
-            border-color: colors.$dark-gray;
+            border-color: colors.$mobile-dark-gray;
             left: 3rem;
             top: 4rem;
 
@@ -1120,7 +1121,7 @@
         padding-top: 3.3rem;
 
         &__hline {
-            background-color: colors.$dark-gray;
+            background-color: colors.$mobile-dark-gray;
         }
 
         &__container {
@@ -1154,7 +1155,8 @@
 
         &__input {
             margin-right: 0;
-            border-color: colors.$dark-gray;
+            border-color: colors.$mobile-dark-gray;
+            border-width: 0.2rem;
         }
     }
 

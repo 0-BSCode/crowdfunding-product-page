@@ -931,14 +931,15 @@
     padding-inline: 3rem;
     padding-top: 4rem;
     padding-bottom: 3.3rem;
-    border-color: #7a7a7a;
+    border-color: #c8c8c8;
     border-radius: 1rem;
+    margin-top: 3rem;
   }
   .option__radio {
     width: 2.8rem;
     height: 2.8rem;
     border-width: 0.1rem;
-    border-color: #7a7a7a;
+    border-color: #c8c8c8;
     left: 3rem;
     top: 4rem;
   }
@@ -987,7 +988,7 @@
     padding-top: 3.3rem;
   }
   .payment__hline {
-    background-color: #7a7a7a;
+    background-color: #c8c8c8;
   }
   .payment__container {
     flex-direction: column;
@@ -1014,7 +1015,8 @@
   }
   .payment__input {
     margin-right: 0;
-    border-color: #7a7a7a;
+    border-color: #c8c8c8;
+    border-width: 0.2rem;
   }
 
   .thanks {
