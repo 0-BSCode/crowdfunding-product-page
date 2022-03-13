@@ -773,7 +773,7 @@
   }
   .container > * {
     border-color: gainsboro;
-    border-width: 0.15rem;
+    border-width: 0.1rem;
   }
 
   .title {
