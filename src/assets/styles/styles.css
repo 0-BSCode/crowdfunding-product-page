@@ -405,6 +405,9 @@
 .reward__select:hover {
   background-color: #147b74;
 }
+.reward__select--out {
+  background-color: #7a7a7a;
+}
 
 /* SUPPORT POP-UP CARD */
 .support {

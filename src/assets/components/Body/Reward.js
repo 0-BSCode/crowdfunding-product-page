@@ -26,7 +26,10 @@ const Reward = ({id, header, criteria,
             <p className="reward__left">
                 {left} <span>left</span>
             </p>
-            <button id={id} className="reward__select" onClick={handleClick}>
+            <button 
+            id={id} 
+            className={left == "0"? "reward__select reward__select--out": "reward__select"} 
+            onClick={handleClick}>
                 Select Reward
             </button>
         </div>
