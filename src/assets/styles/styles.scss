@@ -137,7 +137,7 @@
     grid-row-gap: 1.56rem;
 
     & > * {
-        border: 0.1rem solid hsl(0,0,96%);
+        border: 0.1rem solid colors.$border-dark-gray--desktop;
         border-radius: 0.8rem;
         background-color: white;
         position: relative;
@@ -340,7 +340,7 @@
 
 /* REWARDS */
 .reward {
-    border: 0.1rem solid hsl(0,0,96%);
+    border: 0.1rem solid colors.$border-dark-gray--desktop;
     border-radius: 0.8rem;
     padding: 2.5rem 2rem;
     position: relative;
@@ -429,7 +429,7 @@
     width: 48rem;
     margin: 0 auto;
     padding: 3rem 3.5rem;
-    border: 0.1rem solid hsl(0,0,96%);
+    border: 0.1rem solid colors.$border-dark-gray--desktop;
     border-radius: 0.8rem;
     background-color: white;
     position: absolute;
@@ -484,7 +484,7 @@
 
 /* PAYMENT OPTIONS */
 .option {
-    border: 0.1rem solid colors.$border-dark-gray;
+    border: 0.1rem solid colors.$border-dark-gray--desktop;
     border-radius: 0.8rem;
     padding: 2.2rem 1.8rem 1.3rem 1.8rem;
     margin-top: 2rem;
@@ -515,7 +515,7 @@
         width: 1.5rem;
         background-color: white;
         border-radius: 50%;
-        border: solid 0.1rem colors.$border-dark-gray;
+        border: solid 0.1rem colors.$border-dark-gray--desktop;
         z-index: 1;
 
         /* Color inside radio button once clicked */
@@ -547,7 +547,7 @@
     }
 
     & input:hover ~ &__radio--out {
-        border-color: colors.$border-dark-gray;
+        border-color: colors.$border-dark-gray--desktop;
     }
 
     & input:checked ~ &__radio {
@@ -647,7 +647,7 @@
         left: 0;
         width: 100%;
         height: 0.1rem;
-        background-color: colors.$border-dark-gray;
+        background-color: colors.$border-dark-gray--desktop;
     }
 
     &__container {
@@ -672,7 +672,7 @@
             top: 50%;
             left: 1.5rem;
             transform: translate(0%, -50%);
-            color: colors.$border-dark-gray;
+            color: colors.$dark-gray;
             font-family: CommissionerB;
             opacity: 0.4;
         }
@@ -688,7 +688,7 @@
 
     &__input {
         margin-right: 1rem;
-        border: solid 0.1rem colors.$border-dark-gray;
+        border: solid 0.1rem colors.$border-dark-gray--desktop;
         text-align: center;
         font-family: CommissionerB;
         font-size: 0.9rem;
@@ -725,7 +725,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
-    border: solid 0.1rem whitesmoke;
+    border: solid 0.1rem colors.$border-dark-gray--desktop;
     border-radius: 0.7rem;
     padding: 3.5rem;
 
@@ -854,6 +854,10 @@
         grid-template-rows: 12fr 17.6fr 70.4fr;
         grid-row-gap: 3rem;
         top: -7rem;
+
+        & > * {
+            border-color: colors.$border-dark-gray--mobile;
+        }
     }
 
     .title {
@@ -971,7 +975,8 @@
     }
 
     .reward {
-        padding: 3rem 2.5rem;
+        padding: 3rem 2.7rem;
+        border-color: colors.$border-dark-gray--mobile;
         
         &__title {
             flex-direction: column;
@@ -1021,6 +1026,7 @@
         width: 40rem;
         top: 15rem;
         padding: 4rem 3.5rem;
+        border-color: colors.$border-dark-gray--mobile;
 
         &__header {
             font-size: 2.2rem;
@@ -1061,6 +1067,7 @@
         padding-bottom: 3.3rem;
         border-radius: 1rem;
         margin-top: 3rem;
+        border-color: colors.$border-dark-gray--mobile;
 
         &__radio {
             width: 2.8rem;
@@ -1068,6 +1075,7 @@
             border-width: 0.1rem;
             left: 3rem;
             top: 4rem;
+            border-color: colors.$border-dark-gray--mobile;
 
             &::after {
                 width: 1.5rem;
@@ -1124,6 +1132,7 @@
 
     .payment {
         padding-top: 3.3rem;
+        border-color: colors.$border-dark-gray--mobile;
 
         &__container {
             flex-direction: column;
@@ -1157,6 +1166,7 @@
         &__input {
             margin-right: 0;
             border-width: 0.2rem;
+            border-color: colors.$border-dark-gray--mobile;
         }
     }
 

@@ -458,7 +458,7 @@
 
 /* PAYMENT OPTIONS */
 .option {
-  border: 0.1rem solid gainsboro;
+  border: 0.1rem solid whitesmoke;
   border-radius: 0.8rem;
   padding: 2.2rem 1.8rem 1.3rem 1.8rem;
   margin-top: 2rem;
@@ -486,7 +486,7 @@
   width: 1.5rem;
   background-color: white;
   border-radius: 50%;
-  border: solid 0.1rem gainsboro;
+  border: solid 0.1rem whitesmoke;
   z-index: 1;
   /* Color inside radio button once clicked */
 }
@@ -512,7 +512,7 @@
   border-color: #3cb4ac;
 }
 .option input:hover ~ .option__radio--out {
-  border-color: gainsboro;
+  border-color: whitesmoke;
 }
 .option input:checked ~ .option__radio {
   background-color: white;
@@ -591,7 +591,7 @@
   left: 0;
   width: 100%;
   height: 0.1rem;
-  background-color: gainsboro;
+  background-color: whitesmoke;
 }
 .payment__container {
   margin-top: 1.8rem;
@@ -613,7 +613,7 @@
   top: 50%;
   left: 1.5rem;
   transform: translate(0%, -50%);
-  color: gainsboro;
+  color: #7a7a7a;
   font-family: CommissionerB;
   opacity: 0.4;
 }
@@ -625,7 +625,7 @@
 }
 .payment__input {
   margin-right: 1rem;
-  border: solid 0.1rem gainsboro;
+  border: solid 0.1rem whitesmoke;
   text-align: center;
   font-family: CommissionerB;
   font-size: 0.9rem;
@@ -771,6 +771,9 @@
     grid-row-gap: 3rem;
     top: -7rem;
   }
+  .container > * {
+    border-color: gainsboro;
+  }
 
   .title {
     padding-top: 5.5rem;
@@ -865,7 +868,8 @@
   }
 
   .reward {
-    padding: 3rem 2.5rem;
+    padding: 3rem 2.7rem;
+    border-color: gainsboro;
   }
   .reward__title {
     flex-direction: column;
@@ -907,6 +911,7 @@
     width: 40rem;
     top: 15rem;
     padding: 4rem 3.5rem;
+    border-color: gainsboro;
   }
   .support__header {
     font-size: 2.2rem;
@@ -938,6 +943,7 @@
     padding-bottom: 3.3rem;
     border-radius: 1rem;
     margin-top: 3rem;
+    border-color: gainsboro;
   }
   .option__radio {
     width: 2.8rem;
@@ -945,6 +951,7 @@
     border-width: 0.1rem;
     left: 3rem;
     top: 4rem;
+    border-color: gainsboro;
   }
   .option__radio::after {
     width: 1.5rem;
@@ -989,6 +996,7 @@
 
   .payment {
     padding-top: 3.3rem;
+    border-color: gainsboro;
   }
   .payment__container {
     flex-direction: column;
@@ -1016,6 +1024,7 @@
   .payment__input {
     margin-right: 0;
     border-width: 0.2rem;
+    border-color: gainsboro;
   }
 
   .thanks {
