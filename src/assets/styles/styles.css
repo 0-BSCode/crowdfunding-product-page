@@ -1061,4 +1061,662 @@
     border-radius: 3rem;
     font-size: 1.5rem;
   }
+}
+@media screen and (min-width: 480px) and (max-width: 511px) {
+  :root {
+    font-size: 10px;
+  }
+
+  .app {
+    height: 320rem;
+  }
+
+  .header {
+    background-image: url("../images/image-hero-mobile.jpg");
+    height: 37rem;
+  }
+  .header__navbar {
+    padding-inline: 3rem;
+    padding-top: 4rem;
+    z-index: 2;
+  }
+  .header__logo {
+    width: 15rem;
+  }
+  .header__links {
+    display: none;
+  }
+  .header__menu {
+    display: inline;
+  }
+  .header__link {
+    color: black;
+  }
+
+  .container {
+    width: 40rem;
+    height: 287rem;
+    grid-template-rows: 12fr 17.6fr 70.4fr;
+    grid-row-gap: 3rem;
+    top: -7rem;
+  }
+  .container > * {
+    border-color: gainsboro;
+    border-width: 0.1rem;
+  }
+
+  .title {
+    padding-top: 5.5rem;
+    padding-bottom: 4.5rem;
+  }
+  .title__logo {
+    top: -3.5rem;
+    width: 6.5rem;
+    height: 6.5rem;
+  }
+  .title__heading, .title__subheading {
+    text-align: center;
+  }
+  .title__heading {
+    font-size: 2.55rem;
+  }
+  .title__subheading {
+    padding-top: 2rem;
+    font-size: 1.7rem;
+    line-height: 2.8rem;
+  }
+  .title__btn-list {
+    padding-top: 3rem;
+  }
+  .title__btn, .title__bookmark {
+    height: 6rem;
+  }
+  .title__btn {
+    width: 25.5rem;
+    border-radius: 5rem;
+    font-size: 1.5rem;
+  }
+  .title__bookmark {
+    width: 6rem;
+  }
+  .title__toggle {
+    border-radius: 50%;
+  }
+  .title__toggle::before {
+    width: 6rem;
+    height: 6rem;
+  }
+  .title__toggle::after {
+    content: "";
+  }
+  .title__bookmark input:checked + .title__toggle::after {
+    content: "";
+  }
+
+  .progress {
+    padding: 4rem 3rem 4.5rem 3rem;
+  }
+  .progress__stats {
+    grid-template-columns: 1fr;
+    grid-template-rows: 5fr 2.5fr 5fr 2.5fr 5fr;
+    place-items: center;
+  }
+  .progress__stat-head {
+    font-size: 4rem;
+    text-align: center;
+  }
+  .progress__stat-subtitle {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 1.75rem;
+  }
+  .progress__vline {
+    height: 0.25rem;
+    width: 10rem;
+    margin-left: 0;
+    margin: 2.1rem 0rem;
+  }
+  .progress__tracker {
+    margin-top: 4rem;
+  }
+  .progress__slider {
+    height: 1.5rem;
+    border-radius: 3rem;
+  }
+
+  .about {
+    padding: 4rem 3rem;
+  }
+  .about__heading {
+    font-size: 2.2rem;
+  }
+  .about__description {
+    font-size: 1.68rem;
+    line-height: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+  }
+
+  .reward {
+    padding: 3rem 2.7rem;
+    border-color: gainsboro;
+    border-width: 0.15rem;
+  }
+  .reward__title {
+    flex-direction: column;
+    align-items: start;
+  }
+  .reward__header {
+    font-size: 1.8rem;
+  }
+  .reward__criteria {
+    font-size: 1.7rem;
+    margin-top: 0.6rem;
+  }
+  .reward__description {
+    font-size: 1.65rem;
+    text-align: start;
+    line-height: 2.9rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .reward__footer {
+    flex-direction: column;
+  }
+  .reward__left {
+    font-size: 4rem;
+    margin-bottom: 3rem;
+  }
+  .reward__left span {
+    font-size: 2rem;
+    bottom: 0.7rem;
+  }
+  .reward__select {
+    height: 6rem;
+    width: 20rem;
+    border-radius: 5rem;
+    font-size: 1.6rem;
+  }
+
+  .support {
+    width: 40rem;
+    top: 15rem;
+    padding: 4rem 3.5rem;
+    border-color: gainsboro;
+    border-width: 0.15rem;
+  }
+  .support__header {
+    font-size: 2.2rem;
+  }
+  .support__exit {
+    position: relative;
+    top: 0.3rem;
+    right: 0;
+  }
+  .support__exit img {
+    width: 1.7rem;
+  }
+  .support__description {
+    font-size: 1.65rem;
+    margin-top: 2.5rem;
+    margin-bottom: 3rem;
+    line-height: 2.5rem;
+  }
+  .support__options--desktop {
+    display: none;
+  }
+  .support__options--mobile {
+    display: block;
+  }
+
+  .option {
+    padding-inline: 3rem;
+    padding-top: 4rem;
+    padding-bottom: 3.3rem;
+    border-radius: 1rem;
+    margin-top: 3rem;
+    border-color: gainsboro;
+    border-width: 0.15rem;
+  }
+  .option__radio {
+    width: 2.8rem;
+    height: 2.8rem;
+    border-width: 0.1rem;
+    left: 3rem;
+    top: 4rem;
+    border-color: gainsboro;
+    border-width: 0.15rem;
+  }
+  .option__radio::after {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .option__header, .option__heading {
+    font-size: 1.7rem;
+  }
+  .option__header {
+    margin-left: 4.5rem;
+    margin-top: 0.5rem;
+    font-family: CommissionerB;
+  }
+  .option__header--pledge {
+    margin-top: 0rem;
+    position: relative;
+    bottom: 0.8rem;
+  }
+  .option__pledge {
+    padding-left: 0;
+    font-size: 1.65rem;
+    font-family: CommissionerR;
+    margin-top: 0.6rem;
+  }
+  .option__description, .option__left {
+    margin-left: 0;
+  }
+  .option__description {
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .option__left {
+    font-size: 2.1rem;
+  }
+  .option__left span {
+    bottom: 0;
+    font-size: 1.8rem;
+    padding-left: 0.5rem;
+  }
+
+  .payment {
+    padding-top: 3.3rem;
+    border-color: gainsboro;
+  }
+  .payment__container {
+    flex-direction: column;
+    margin-top: 3.5rem;
+  }
+  .payment__hline {
+    background-color: gainsboro;
+    height: 0.15rem;
+  }
+  .payment__form {
+    margin-top: 2.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .payment__form::after {
+    font-size: 1.7rem;
+    left: 3rem;
+  }
+  .payment__par {
+    font-size: 1.7rem;
+  }
+  .payment__input, .payment__submit {
+    height: 6rem;
+    width: 12.5rem;
+    border-radius: 3rem;
+    font-size: 1.7rem;
+  }
+  .payment__input {
+    margin-right: 0;
+    border-width: 0.2rem;
+    border-color: gainsboro;
+  }
+
+  .thanks {
+    width: 40rem;
+    height: 47rem;
+    border-radius: 1rem;
+    padding: 4rem;
+  }
+  .thanks__img {
+    width: 30%;
+    margin-bottom: 4.5rem;
+  }
+  .thanks__header {
+    font-size: 2.2rem;
+  }
+  .thanks__description {
+    font-size: 1.6rem;
+    line-height: 2.7rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .thanks__btn {
+    height: 5.5rem;
+    width: 13rem;
+    border-radius: 3rem;
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 479px) {
+  :root {
+    font-size: 8px;
+  }
+
+  .app {
+    height: 320rem;
+  }
+
+  .header {
+    background-image: url("../images/image-hero-mobile.jpg");
+    height: 37rem;
+  }
+  .header__navbar {
+    padding-inline: 3rem;
+    padding-top: 4rem;
+    z-index: 2;
+  }
+  .header__logo {
+    width: 15rem;
+  }
+  .header__links {
+    display: none;
+  }
+  .header__menu {
+    display: inline;
+  }
+  .header__link {
+    color: black;
+  }
+
+  .container {
+    width: 40rem;
+    height: 287rem;
+    grid-template-rows: 12fr 17.6fr 70.4fr;
+    grid-row-gap: 3rem;
+    top: -7rem;
+  }
+  .container > * {
+    border-color: gainsboro;
+    border-width: 0.1rem;
+  }
+
+  .title {
+    padding-top: 5.5rem;
+    padding-bottom: 4.5rem;
+  }
+  .title__logo {
+    top: -3.5rem;
+    width: 6.5rem;
+    height: 6.5rem;
+  }
+  .title__heading, .title__subheading {
+    text-align: center;
+  }
+  .title__heading {
+    font-size: 2.55rem;
+  }
+  .title__subheading {
+    padding-top: 2rem;
+    font-size: 1.7rem;
+    line-height: 2.8rem;
+  }
+  .title__btn-list {
+    padding-top: 3rem;
+  }
+  .title__btn, .title__bookmark {
+    height: 6rem;
+  }
+  .title__btn {
+    width: 25.5rem;
+    border-radius: 5rem;
+    font-size: 1.5rem;
+  }
+  .title__bookmark {
+    width: 6rem;
+  }
+  .title__toggle {
+    border-radius: 50%;
+  }
+  .title__toggle::before {
+    width: 6rem;
+    height: 6rem;
+  }
+  .title__toggle::after {
+    content: "";
+  }
+  .title__bookmark input:checked + .title__toggle::after {
+    content: "";
+  }
+
+  .progress {
+    padding: 4rem 3rem 4.5rem 3rem;
+  }
+  .progress__stats {
+    grid-template-columns: 1fr;
+    grid-template-rows: 5fr 2.5fr 5fr 2.5fr 5fr;
+    place-items: center;
+  }
+  .progress__stat-head {
+    font-size: 4rem;
+    text-align: center;
+  }
+  .progress__stat-subtitle {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 1.75rem;
+  }
+  .progress__vline {
+    height: 0.25rem;
+    width: 10rem;
+    margin-left: 0;
+    margin: 2.1rem 0rem;
+  }
+  .progress__tracker {
+    margin-top: 4rem;
+  }
+  .progress__slider {
+    height: 1.5rem;
+    border-radius: 3rem;
+  }
+
+  .about {
+    padding: 4rem 3rem;
+  }
+  .about__heading {
+    font-size: 2.2rem;
+  }
+  .about__description {
+    font-size: 1.68rem;
+    line-height: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+  }
+
+  .reward {
+    padding: 3rem 2.7rem;
+    border-color: gainsboro;
+    border-width: 0.15rem;
+  }
+  .reward__title {
+    flex-direction: column;
+    align-items: start;
+  }
+  .reward__header {
+    font-size: 1.8rem;
+  }
+  .reward__criteria {
+    font-size: 1.7rem;
+    margin-top: 0.6rem;
+  }
+  .reward__description {
+    font-size: 1.65rem;
+    text-align: start;
+    line-height: 2.9rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .reward__footer {
+    flex-direction: column;
+  }
+  .reward__left {
+    font-size: 4rem;
+    margin-bottom: 3rem;
+  }
+  .reward__left span {
+    font-size: 2rem;
+    bottom: 0.7rem;
+  }
+  .reward__select {
+    height: 6rem;
+    width: 20rem;
+    border-radius: 5rem;
+    font-size: 1.6rem;
+  }
+
+  .support {
+    width: 40rem;
+    top: 15rem;
+    padding: 4rem 3.5rem;
+    border-color: gainsboro;
+    border-width: 0.15rem;
+  }
+  .support__header {
+    font-size: 2.2rem;
+  }
+  .support__exit {
+    position: relative;
+    top: 0.3rem;
+    right: 0;
+  }
+  .support__exit img {
+    width: 1.7rem;
+  }
+  .support__description {
+    font-size: 1.65rem;
+    margin-top: 2.5rem;
+    margin-bottom: 3rem;
+    line-height: 2.5rem;
+  }
+  .support__options--desktop {
+    display: none;
+  }
+  .support__options--mobile {
+    display: block;
+  }
+
+  .option {
+    padding-inline: 3rem;
+    padding-top: 4rem;
+    padding-bottom: 3.3rem;
+    border-radius: 1rem;
+    margin-top: 3rem;
+    border-color: gainsboro;
+    border-width: 0.15rem;
+  }
+  .option__radio {
+    width: 2.8rem;
+    height: 2.8rem;
+    border-width: 0.1rem;
+    left: 3rem;
+    top: 4rem;
+    border-color: gainsboro;
+    border-width: 0.15rem;
+  }
+  .option__radio::after {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .option__header, .option__heading {
+    font-size: 1.7rem;
+  }
+  .option__header {
+    margin-left: 4.5rem;
+    margin-top: 0.5rem;
+    font-family: CommissionerB;
+  }
+  .option__header--pledge {
+    margin-top: 0rem;
+    position: relative;
+    bottom: 0.8rem;
+  }
+  .option__pledge {
+    padding-left: 0;
+    font-size: 1.65rem;
+    font-family: CommissionerR;
+    margin-top: 0.6rem;
+  }
+  .option__description, .option__left {
+    margin-left: 0;
+  }
+  .option__description {
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .option__left {
+    font-size: 2.1rem;
+  }
+  .option__left span {
+    bottom: 0;
+    font-size: 1.8rem;
+    padding-left: 0.5rem;
+  }
+
+  .payment {
+    padding-top: 3.3rem;
+    border-color: gainsboro;
+  }
+  .payment__container {
+    flex-direction: column;
+    margin-top: 3.5rem;
+  }
+  .payment__hline {
+    background-color: gainsboro;
+    height: 0.15rem;
+  }
+  .payment__form {
+    margin-top: 2.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .payment__form::after {
+    font-size: 1.7rem;
+    left: 3rem;
+  }
+  .payment__par {
+    font-size: 1.7rem;
+  }
+  .payment__input, .payment__submit {
+    height: 6rem;
+    width: 12.5rem;
+    border-radius: 3rem;
+    font-size: 1.7rem;
+  }
+  .payment__input {
+    margin-right: 0;
+    border-width: 0.2rem;
+    border-color: gainsboro;
+  }
+
+  .thanks {
+    width: 40rem;
+    height: 47rem;
+    border-radius: 1rem;
+    padding: 4rem;
+  }
+  .thanks__img {
+    width: 30%;
+    margin-bottom: 4.5rem;
+  }
+  .thanks__header {
+    font-size: 2.2rem;
+  }
+  .thanks__description {
+    font-size: 1.6rem;
+    line-height: 2.7rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .thanks__btn {
+    height: 5.5rem;
+    width: 13rem;
+    border-radius: 3rem;
+    font-size: 1.5rem;
+  }
 }/*# sourceMappingURL=styles.css.map */

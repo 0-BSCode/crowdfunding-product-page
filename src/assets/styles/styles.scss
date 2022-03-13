@@ -1210,3 +1210,801 @@
         }
     }
 }
+
+@media screen and (min-width: 480px) and (max-width: 511px) {
+    :root {
+        font-size: 10px;
+    }
+
+    .app {
+        height: 320rem;
+    }
+
+    .header {
+        background-image: url("../images/image-hero-mobile.jpg");
+        height: 37rem;
+
+        &__navbar {
+            padding-inline: 3rem;
+            padding-top: 4rem;
+            z-index: 2;
+        }
+
+        &__logo {
+            width: 15rem;
+        }
+
+        &__links {
+            display: none;
+        }
+
+        &__menu {
+            display: inline;
+        }
+
+        &__link {
+            color: black;
+        }
+    }
+
+    .container {
+        width: 40rem;
+        height: 287rem;
+        grid-template-rows: 12fr 17.6fr 70.4fr;
+        grid-row-gap: 3rem;
+        top: -7rem;
+
+        & > * {
+            border-color: colors.$border-dark-gray--mobile;
+            border-width: 0.1rem;
+        }
+    }
+
+    .title {
+        padding-top: 5.5rem;
+        padding-bottom: 4.5rem;
+
+        &__logo {
+            top: -3.5rem;
+            width: 6.5rem;
+            height: 6.5rem;
+        }
+
+        &__heading,
+        &__subheading {
+            text-align: center;
+        }
+
+        &__heading {
+            font-size: 2.55rem;
+        }
+
+        &__subheading {
+            padding-top: 2rem;
+            font-size: 1.7rem;
+            line-height: 2.8rem;
+        }
+
+        &__btn-list {
+            padding-top: 3rem;
+        }
+
+        &__btn,
+        &__bookmark {
+            height: 6rem;
+        }
+
+        &__btn {
+            width: 25.5rem;
+            border-radius: 5rem;
+            font-size: 1.5rem;
+        }
+
+        &__bookmark {
+            width: 6rem;
+        }
+
+        &__toggle {
+            border-radius: 50%;
+
+            &::before {
+                width: 6rem;
+                height: 6rem;
+            }
+
+            &::after {
+                content: "";
+            }
+        }
+
+        &__bookmark input:checked + &__toggle::after {
+            content: "";
+        }
+    }
+
+    .progress {
+        padding: 4rem 3rem 4.5rem 3rem;
+
+        &__stats {
+            grid-template-columns: 1fr;
+            grid-template-rows: 5fr 2.5fr 5fr 2.5fr 5fr;
+            place-items: center;
+        }
+
+        &__stat-head {
+            font-size: 4rem;
+            text-align: center;
+        }
+
+        &__stat-subtitle {
+            margin-top: 1rem;
+            text-align: center;
+            font-size: 1.75rem;
+        }
+
+        &__vline {
+            height: 0.25rem;
+            width: 10rem;
+            margin-left: 0;
+            margin: 2.1rem 0rem;
+        }
+
+        &__tracker {
+            margin-top: 4rem;
+        }
+
+        &__slider {
+            height: 1.5rem;
+            border-radius: 3rem;
+        }
+    }
+
+    .about {
+        padding: 4rem 3rem;
+
+        &__heading {
+            font-size: 2.2rem;
+        }
+
+        &__description {
+            font-size: 1.68rem;
+            line-height: 3rem;
+            margin-top: 3rem;
+            margin-bottom: 4rem;
+        }
+    }
+
+    .reward {
+        padding: 3rem 2.7rem;
+        border-color: colors.$border-dark-gray--mobile;
+        border-width: 0.15rem;
+        
+        &__title {
+            flex-direction: column;
+            align-items: start;
+        }
+
+        &__header {
+            font-size: 1.8rem;
+        }
+
+        &__criteria {
+            font-size: 1.7rem;
+            margin-top: 0.6rem;
+        }
+
+        &__description {
+            font-size: 1.65rem;
+            text-align: start;
+            line-height: 2.9rem;
+            margin-top: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        &__footer {
+            flex-direction: column;
+        }
+
+        &__left {
+            font-size: 4rem;
+            margin-bottom: 3rem;
+        }
+
+        &__left span {
+            font-size: 2rem;
+            bottom: 0.7rem;
+        }
+
+        &__select {
+            height: 6rem;
+            width: 20rem;
+            border-radius: 5rem;
+            font-size: 1.6rem;
+        }
+    }
+
+    .support {
+        width: 40rem;
+        top: 15rem;
+        padding: 4rem 3.5rem;
+        border-color: colors.$border-dark-gray--mobile;
+        border-width: 0.15rem;
+
+        &__header {
+            font-size: 2.2rem;
+        }
+
+        &__exit {
+            position: relative;
+            top: 0.3rem;
+            right: 0;
+        }
+
+        &__exit img {
+            width: 1.7rem;
+        }
+
+        &__description {
+            font-size: 1.65rem;
+            margin-top: 2.5rem;
+            margin-bottom: 3rem;
+            line-height: 2.5rem;
+        }
+
+        &__options {
+
+            &--desktop {
+                display: none;
+            }
+
+            &--mobile {
+                display: block;
+            }
+        }
+    }
+
+    .option {
+        padding-inline: 3rem;
+        padding-top: 4rem;
+        padding-bottom: 3.3rem;
+        border-radius: 1rem;
+        margin-top: 3rem;
+        border-color: colors.$border-dark-gray--mobile;
+        border-width: 0.15rem;
+
+        &__radio {
+            width: 2.8rem;
+            height: 2.8rem;
+            border-width: 0.1rem;
+            left: 3rem;
+            top: 4rem;
+            border-color: colors.$border-dark-gray--mobile;
+            border-width: 0.15rem;
+
+            &::after {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+        }
+
+        &__header,
+        &__heading {
+            font-size: 1.7rem;
+        }
+
+        &__header {
+            margin-left: 4.5rem;
+            margin-top: 0.5rem;
+            font-family: CommissionerB;
+
+            &--pledge {
+                margin-top: 0rem;
+                position: relative;
+                bottom: 0.8rem;
+            }
+        }
+
+        &__pledge {
+            padding-left: 0;
+            font-size: 1.65rem;
+            font-family: CommissionerR;
+            margin-top: 0.6rem;
+        }
+
+        &__description,
+        &__left {
+            margin-left: 0;
+        }
+
+        &__description {
+            font-size: 1.6rem;
+            line-height: 2.8rem;
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        &__left {
+            font-size: 2.1rem;
+        }
+
+        &__left span {
+            bottom: 0;
+            font-size: 1.8rem;
+            padding-left: 0.5rem;
+        }
+    }
+
+    .payment {
+        padding-top: 3.3rem;
+        border-color: colors.$border-dark-gray--mobile;
+
+        &__container {
+            flex-direction: column;
+            margin-top: 3.5rem;
+        }
+
+        &__hline {
+            background-color: colors.$border-dark-gray--mobile;
+            height: 0.15rem;
+        }
+
+        &__form {
+            margin-top: 2.5rem;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            &::after {
+                font-size: 1.7rem;
+                left: 3rem;
+            }
+        }
+
+        &__par {
+            font-size: 1.7rem;
+        }
+
+        &__input,
+        &__submit {
+            height: 6rem;
+            width: 12.5rem;
+            border-radius: 3rem;
+            font-size: 1.7rem;
+        }
+
+        &__input {
+            margin-right: 0;
+            border-width: 0.2rem;
+            border-color: colors.$border-dark-gray--mobile;
+        }
+    }
+
+    .thanks {
+        width: 40rem;
+        height: 47rem;
+        border-radius: 1rem;
+        padding: 4rem;
+
+        &__img {
+            width: 30%;
+            margin-bottom: 4.5rem;
+        }
+
+        &__header {
+            font-size: 2.2rem;
+        }
+
+        &__description {
+            font-size: 1.6rem;
+            line-height: 2.7rem;
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        &__btn {
+            height: 5.5rem;
+            width: 13rem;
+            border-radius: 3rem;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@media screen and (min-width: 375px) and (max-width: 479px) {
+    :root {
+        font-size: 8px;
+    }
+
+    .app {
+        height: 320rem;
+    }
+
+    .header {
+        background-image: url("../images/image-hero-mobile.jpg");
+        height: 37rem;
+
+        &__navbar {
+            padding-inline: 3rem;
+            padding-top: 4rem;
+            z-index: 2;
+        }
+
+        &__logo {
+            width: 15rem;
+        }
+
+        &__links {
+            display: none;
+        }
+
+        &__menu {
+            display: inline;
+        }
+
+        &__link {
+            color: black;
+        }
+    }
+
+    .container {
+        width: 40rem;
+        height: 287rem;
+        grid-template-rows: 12fr 17.6fr 70.4fr;
+        grid-row-gap: 3rem;
+        top: -7rem;
+
+        & > * {
+            border-color: colors.$border-dark-gray--mobile;
+            border-width: 0.1rem;
+        }
+    }
+
+    .title {
+        padding-top: 5.5rem;
+        padding-bottom: 4.5rem;
+
+        &__logo {
+            top: -3.5rem;
+            width: 6.5rem;
+            height: 6.5rem;
+        }
+
+        &__heading,
+        &__subheading {
+            text-align: center;
+        }
+
+        &__heading {
+            font-size: 2.55rem;
+        }
+
+        &__subheading {
+            padding-top: 2rem;
+            font-size: 1.7rem;
+            line-height: 2.8rem;
+        }
+
+        &__btn-list {
+            padding-top: 3rem;
+        }
+
+        &__btn,
+        &__bookmark {
+            height: 6rem;
+        }
+
+        &__btn {
+            width: 25.5rem;
+            border-radius: 5rem;
+            font-size: 1.5rem;
+        }
+
+        &__bookmark {
+            width: 6rem;
+        }
+
+        &__toggle {
+            border-radius: 50%;
+
+            &::before {
+                width: 6rem;
+                height: 6rem;
+            }
+
+            &::after {
+                content: "";
+            }
+        }
+
+        &__bookmark input:checked + &__toggle::after {
+            content: "";
+        }
+    }
+
+    .progress {
+        padding: 4rem 3rem 4.5rem 3rem;
+
+        &__stats {
+            grid-template-columns: 1fr;
+            grid-template-rows: 5fr 2.5fr 5fr 2.5fr 5fr;
+            place-items: center;
+        }
+
+        &__stat-head {
+            font-size: 4rem;
+            text-align: center;
+        }
+
+        &__stat-subtitle {
+            margin-top: 1rem;
+            text-align: center;
+            font-size: 1.75rem;
+        }
+
+        &__vline {
+            height: 0.25rem;
+            width: 10rem;
+            margin-left: 0;
+            margin: 2.1rem 0rem;
+        }
+
+        &__tracker {
+            margin-top: 4rem;
+        }
+
+        &__slider {
+            height: 1.5rem;
+            border-radius: 3rem;
+        }
+    }
+
+    .about {
+        padding: 4rem 3rem;
+
+        &__heading {
+            font-size: 2.2rem;
+        }
+
+        &__description {
+            font-size: 1.68rem;
+            line-height: 3rem;
+            margin-top: 3rem;
+            margin-bottom: 4rem;
+        }
+    }
+
+    .reward {
+        padding: 3rem 2.7rem;
+        border-color: colors.$border-dark-gray--mobile;
+        border-width: 0.15rem;
+        
+        &__title {
+            flex-direction: column;
+            align-items: start;
+        }
+
+        &__header {
+            font-size: 1.8rem;
+        }
+
+        &__criteria {
+            font-size: 1.7rem;
+            margin-top: 0.6rem;
+        }
+
+        &__description {
+            font-size: 1.65rem;
+            text-align: start;
+            line-height: 2.9rem;
+            margin-top: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        &__footer {
+            flex-direction: column;
+        }
+
+        &__left {
+            font-size: 4rem;
+            margin-bottom: 3rem;
+        }
+
+        &__left span {
+            font-size: 2rem;
+            bottom: 0.7rem;
+        }
+
+        &__select {
+            height: 6rem;
+            width: 20rem;
+            border-radius: 5rem;
+            font-size: 1.6rem;
+        }
+    }
+
+    .support {
+        width: 40rem;
+        top: 15rem;
+        padding: 4rem 3.5rem;
+        border-color: colors.$border-dark-gray--mobile;
+        border-width: 0.15rem;
+
+        &__header {
+            font-size: 2.2rem;
+        }
+
+        &__exit {
+            position: relative;
+            top: 0.3rem;
+            right: 0;
+        }
+
+        &__exit img {
+            width: 1.7rem;
+        }
+
+        &__description {
+            font-size: 1.65rem;
+            margin-top: 2.5rem;
+            margin-bottom: 3rem;
+            line-height: 2.5rem;
+        }
+
+        &__options {
+
+            &--desktop {
+                display: none;
+            }
+
+            &--mobile {
+                display: block;
+            }
+        }
+    }
+
+    .option {
+        padding-inline: 3rem;
+        padding-top: 4rem;
+        padding-bottom: 3.3rem;
+        border-radius: 1rem;
+        margin-top: 3rem;
+        border-color: colors.$border-dark-gray--mobile;
+        border-width: 0.15rem;
+
+        &__radio {
+            width: 2.8rem;
+            height: 2.8rem;
+            border-width: 0.1rem;
+            left: 3rem;
+            top: 4rem;
+            border-color: colors.$border-dark-gray--mobile;
+            border-width: 0.15rem;
+
+            &::after {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+        }
+
+        &__header,
+        &__heading {
+            font-size: 1.7rem;
+        }
+
+        &__header {
+            margin-left: 4.5rem;
+            margin-top: 0.5rem;
+            font-family: CommissionerB;
+
+            &--pledge {
+                margin-top: 0rem;
+                position: relative;
+                bottom: 0.8rem;
+            }
+        }
+
+        &__pledge {
+            padding-left: 0;
+            font-size: 1.65rem;
+            font-family: CommissionerR;
+            margin-top: 0.6rem;
+        }
+
+        &__description,
+        &__left {
+            margin-left: 0;
+        }
+
+        &__description {
+            font-size: 1.6rem;
+            line-height: 2.8rem;
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        &__left {
+            font-size: 2.1rem;
+        }
+
+        &__left span {
+            bottom: 0;
+            font-size: 1.8rem;
+            padding-left: 0.5rem;
+        }
+    }
+
+    .payment {
+        padding-top: 3.3rem;
+        border-color: colors.$border-dark-gray--mobile;
+
+        &__container {
+            flex-direction: column;
+            margin-top: 3.5rem;
+        }
+
+        &__hline {
+            background-color: colors.$border-dark-gray--mobile;
+            height: 0.15rem;
+        }
+
+        &__form {
+            margin-top: 2.5rem;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            &::after {
+                font-size: 1.7rem;
+                left: 3rem;
+            }
+        }
+
+        &__par {
+            font-size: 1.7rem;
+        }
+
+        &__input,
+        &__submit {
+            height: 6rem;
+            width: 12.5rem;
+            border-radius: 3rem;
+            font-size: 1.7rem;
+        }
+
+        &__input {
+            margin-right: 0;
+            border-width: 0.2rem;
+            border-color: colors.$border-dark-gray--mobile;
+        }
+    }
+
+    .thanks {
+        width: 40rem;
+        height: 47rem;
+        border-radius: 1rem;
+        padding: 4rem;
+
+        &__img {
+            width: 30%;
+            margin-bottom: 4.5rem;
+        }
+
+        &__header {
+            font-size: 2.2rem;
+        }
+
+        &__description {
+            font-size: 1.6rem;
+            line-height: 2.7rem;
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        &__btn {
+            height: 5.5rem;
+            width: 13rem;
+            border-radius: 3rem;
+            font-size: 1.5rem;
+        }
+    }
+}
