@@ -34,7 +34,7 @@ const Option = ({id, rewardId, setRewardId, heading,
   useEffect(() => {
     // Make radio button clicked when corresponding reward 
     // button is clicked
-    const buttons = document.querySelectorAll(".option__radio");
+    const buttons = document.querySelectorAll(".option__rinput");
     buttons.forEach(button => {
         if (button.id == rewardId) {
             button.checked = true;
@@ -53,13 +53,14 @@ const Option = ({id, rewardId, setRewardId, heading,
   return (
     <label className={left == "0"? "option option--out": "option"} >
         <input 
-        className="option__radio"
+        className="option__rinput"
         type="radio" 
         name="radio" 
         disabled={left=="0"} 
         id={id}
         onClick={handleClick} />
-        <span className="option__radio"></span>
+        <span 
+        className={left == "0"? "option__radio option__radio--out": "option__radio"} />
         {
             pledge == "0" ?
             <h4 className="option__header option__header--none">

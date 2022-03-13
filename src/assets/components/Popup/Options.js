@@ -78,6 +78,7 @@ const Options = ({rewardId, setRewardId,
         setStocks={setStocks}
         setShowThanks={setShowThanks} />
       </div>
+      
       <div className="support__options support__options--mobile">
         <OptionMobile
         id="4"

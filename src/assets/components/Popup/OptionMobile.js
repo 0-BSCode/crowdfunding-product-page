@@ -5,16 +5,19 @@ const OptionMobile = ({id, rewardId, setRewardId, heading,
                  pledge, left, description, amount,
                 setAmount, backers, setBackers, 
                 stocks, setStocks, setShowThanks}) => {
-  
+
+    // Ensure that ID's being checked are from 0 to 3
+    // since buttons in main card set them from 0 to 3
+    // but some buttons in support popup are from 4 to 7
     const handleClick= (e) => {
-        setRewardId(e.target.id);
+        setRewardId(e.target.id % 4);
     }
   
     const handleSubmission = (e) => {
         e.preventDefault();
 
     // Only selects one element
-    const input = document.querySelector(".payment__input");
+    const input = document.querySelector(".payment__input--mobile");
 
     // Do a check to see if amount is at least minimum pledge
     if (Number(input.value) >= pledge) {
@@ -24,7 +27,7 @@ const OptionMobile = ({id, rewardId, setRewardId, heading,
         setShowThanks(true);
         
         // Decrease stock
-        let key = Object.keys(stocks)[id-1];
+        let key = Object.keys(stocks)[(id % 4)-1];
         setStocks({...stocks, [key]: stocks[key]-1});
     } else {
         input.style.borderColor = "salmon";
@@ -32,11 +35,12 @@ const OptionMobile = ({id, rewardId, setRewardId, heading,
   }
 
   useEffect(() => {
+
     // Make radio button clicked when corresponding reward 
     // button is clicked
-    const buttons = document.querySelectorAll(".option__radio");
+    const buttons = document.querySelectorAll(".option__rinput--mobile");
     buttons.forEach(button => {
-        if (button.id == rewardId) {
+        if (button.id % 4 == rewardId) {
             button.checked = true;
         }
     })
@@ -44,7 +48,7 @@ const OptionMobile = ({id, rewardId, setRewardId, heading,
     // Update container border when clicked
     const containers = document.querySelectorAll(".option");
     containers.forEach((container) => {
-        container.firstChild.id == rewardId?
+        container.firstChild.id % 4 == rewardId?
         container.classList.add("option--clicked"):
         container.classList.remove("option--clicked");
     });
@@ -53,13 +57,14 @@ const OptionMobile = ({id, rewardId, setRewardId, heading,
   return (
     <label className={left == "0"? "option option--out": "option"} >
         <input 
-        className="option__radio"
+        className="option__rinput--mobile"
         type="radio" 
         name="radio" 
         disabled={left=="0"} 
         id={id}
         onClick={handleClick} />
-        <span className="option__radio"></span>
+        <span 
+        className={left == "0"? "option__radio option__radio--out": "option__radio"} />
         {
             pledge == "0" ?
             <h4 className="option__header option__header--none">
@@ -90,7 +95,7 @@ const OptionMobile = ({id, rewardId, setRewardId, heading,
             </p>:''
         }
         {
-            id == rewardId?
+            id % 4 == rewardId?
             <div className="payment">
                 <div className="payment__hline"></div>
                 <div className="payment__container">
@@ -102,7 +107,7 @@ const OptionMobile = ({id, rewardId, setRewardId, heading,
                     onSubmit={handleSubmission}>
                         <input 
                         type="text" 
-                        className="payment__input" 
+                        className="payment__input payment__input--mobile" 
                         placeholder={pledge}/>
                         <button 
                         type="submit" 
