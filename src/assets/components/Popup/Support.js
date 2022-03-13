@@ -11,12 +11,14 @@ const Support = ({rewardId, setRewardId,
 
   return (
     <section className="support">
-        <button className="support__exit" onClick={unshowPopup}>
-            <img className="support__exit-img" alt="Exit" src={exit} />
-        </button>
-        <h3 className="support__header">
-            Back this project
-        </h3>
+        <div className="support__header-container">
+            <h3 className="support__header">
+                Back this project
+            </h3>
+            <button className="support__exit" onClick={unshowPopup}>
+                <img className="support__exit-img" alt="Exit" src={exit} />
+            </button>
+        </div>
         <p className="support__description">
             Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?
         </p>
