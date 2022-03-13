@@ -471,7 +471,7 @@
   cursor: pointer;
 }
 .option--clicked {
-  border-color: #3cb4ac;
+  border-color: #3cb4ac !important;
 }
 .option > input {
   position: absolute;

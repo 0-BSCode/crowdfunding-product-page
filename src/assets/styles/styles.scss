@@ -496,7 +496,7 @@
     }
 
     &--clicked {
-        border-color: colors.$moderate-cyan;
+        border-color: colors.$moderate-cyan !important;
     }
 
     /* Hide default radio button */
