@@ -14,8 +14,8 @@ const Option = ({id, rewardId, setRewardId, heading,
         e.preventDefault();
 
     // Only selects one element
-    const input = document.querySelector(".payment__input");
-
+    const input = document.querySelector(".payment__input--desktop");
+    
     // Do a check to see if amount is at least minimum pledge
     if (Number(input.value) >= pledge) {
         setAmount(amount+Number(input.value));
@@ -34,7 +34,7 @@ const Option = ({id, rewardId, setRewardId, heading,
   useEffect(() => {
     // Make radio button clicked when corresponding reward 
     // button is clicked
-    const buttons = document.querySelectorAll(".option__rinput");
+    const buttons = document.querySelectorAll(".option__rinput--desktop");
     buttons.forEach(button => {
         if (button.id == rewardId) {
             button.checked = true;
@@ -53,9 +53,9 @@ const Option = ({id, rewardId, setRewardId, heading,
   return (
     <label className={left == "0"? "option option--out": "option"} >
         <input 
-        className="option__rinput"
+        className="option__rinput--desktop"
         type="radio" 
-        name="radio" 
+        name="radio-desktop" 
         disabled={left=="0"} 
         id={id}
         onClick={handleClick} />
@@ -100,7 +100,7 @@ const Option = ({id, rewardId, setRewardId, heading,
                     onSubmit={handleSubmission}>
                         <input 
                         type="text" 
-                        className="payment__input" 
+                        className="payment__input payment__input--desktop" 
                         placeholder={pledge}/>
                         <button 
                         type="submit" 

@@ -59,7 +59,7 @@ const OptionMobile = ({id, rewardId, setRewardId, heading,
         <input 
         className="option__rinput--mobile"
         type="radio" 
-        name="radio" 
+        name="radio-mobile" 
         disabled={left=="0"} 
         id={id}
         onClick={handleClick} />
