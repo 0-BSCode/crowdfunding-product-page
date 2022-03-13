@@ -30,7 +30,9 @@ const Reward = ({id, header, criteria,
             id={id} 
             className={left == "0"? "reward__select reward__select--out": "reward__select"} 
             onClick={handleClick}>
-                Select Reward
+                {left == "0"?
+                "Out of stock":
+                "Select Reward"}
             </button>
         </div>
     </div>
