@@ -430,6 +430,10 @@
 .support__exit:hover {
   cursor: pointer;
 }
+.support__header-container {
+  display: flex;
+  justify-content: space-between;
+}
 .support__header {
   font-family: CommissionerB;
   font-size: 1.5rem;
@@ -445,12 +449,19 @@
   grid-template-rows: repeat(4, fit-content);
   grid-row-gap: 1.5rem;
 }
+.support__options--desktop {
+  display: block;
+}
+.support__options--mobile {
+  display: none;
+}
 
 /* PAYMENT OPTIONS */
 .option {
   border: 0.1rem solid whitesmoke;
   border-radius: 0.8rem;
   padding: 2.2rem 1.8rem 1.3rem 1.8rem;
+  margin-top: 2rem;
   position: relative;
   display: block;
   /* Hide default radio button */
@@ -482,8 +493,9 @@
 .option__radio::after {
   content: "";
   position: absolute;
-  top: 0.2rem;
-  left: 0.2rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 0.8rem;
   height: 0.8rem;
   background-color: #3cb4ac;
@@ -498,6 +510,7 @@
 }
 .option input:checked ~ .option__radio {
   background-color: white;
+  border-color: #147b74;
 }
 .option input:checked ~ .option__radio::after {
   display: block;
@@ -527,6 +540,10 @@
 .option__header--pledge {
   display: flex;
   justify-content: space-between;
+}
+.option__header-container--mobile {
+  display: flex;
+  flex-direction: column;
 }
 .option__heading, .option__pledge {
   display: inline-block;
@@ -884,6 +901,120 @@
   .support {
     width: 40rem;
     top: 15rem;
+    padding: 4rem 3.5rem;
+  }
+  .support__header {
+    font-size: 2.2rem;
+  }
+  .support__exit {
+    position: relative;
+    top: 0.3rem;
+    right: 0;
+  }
+  .support__exit img {
+    width: 1.7rem;
+  }
+  .support__description {
+    font-size: 1.7rem;
+    margin-top: 2.5rem;
+    margin-bottom: 3rem;
+    line-height: 2.5rem;
+  }
+  .support__options--desktop {
+    display: none;
+  }
+  .support__options--mobile {
+    display: block;
+  }
+
+  .option {
+    padding-inline: 3rem;
+    padding-top: 4rem;
+    padding-bottom: 3.3rem;
+    border-color: #7a7a7a;
+    border-radius: 1rem;
+  }
+  .option__radio {
+    width: 2.8rem;
+    height: 2.8rem;
+    border-width: 0.1rem;
+    border-color: #7a7a7a;
+    left: 3rem;
+    top: 4rem;
+  }
+  .option__radio::after {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .option__header, .option__heading {
+    font-size: 1.7rem;
+  }
+  .option__header {
+    margin-left: 4.5rem;
+    margin-top: 0.5rem;
+    font-family: CommissionerB;
+  }
+  .option__header--pledge {
+    margin-top: 0rem;
+    position: relative;
+    bottom: 0.8rem;
+  }
+  .option__pledge {
+    padding-left: 0;
+    font-size: 1.65rem;
+    font-family: CommissionerR;
+    margin-top: 0.6rem;
+  }
+  .option__description, .option__left {
+    margin-left: 0;
+  }
+  .option__description {
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .option__left {
+    font-size: 2.1rem;
+  }
+  .option__left span {
+    bottom: 0;
+    font-size: 1.8rem;
+    padding-left: 0.5rem;
+  }
+
+  .payment {
+    padding-top: 3.3rem;
+  }
+  .payment__hline {
+    background-color: #7a7a7a;
+  }
+  .payment__container {
+    flex-direction: column;
+    margin-top: 3.5rem;
+  }
+  .payment__form {
+    margin-top: 2.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .payment__form::after {
+    font-size: 1.7rem;
+    left: 3rem;
+  }
+  .payment__par {
+    font-size: 1.7rem;
+  }
+  .payment__input, .payment__submit {
+    height: 6rem;
+    width: 12.5rem;
+    border-radius: 3rem;
+    font-size: 1.7rem;
+  }
+  .payment__input {
+    margin-right: 0;
+    border-color: #7a7a7a;
   }
 
   .thanks {

@@ -450,6 +450,11 @@
         }
     }
 
+    &__header-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
     &__header {
         font-family: CommissionerB;
         font-size: 1.5rem;
@@ -465,6 +470,14 @@
         display: grid;
         grid-template-rows: repeat(4, fit-content);
         grid-row-gap: 1.5rem;
+
+        &--desktop {
+            display: block;
+        }
+
+        &--mobile {
+            display: none;
+        }
     }
 }
 
@@ -474,6 +487,7 @@
     border: 0.1rem solid hsl(0,0,96%);
     border-radius: 0.8rem;
     padding: 2.2rem 1.8rem 1.3rem 1.8rem;
+    margin-top: 2rem;
     position: relative;
     display: block;
 
@@ -508,8 +522,9 @@
         &::after {
             content: '';
             position: absolute;
-            top: 0.2rem;
-            left: 0.2rem;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             width: 0.8rem;
             height: 0.8rem;
             background-color: colors.$moderate-cyan;
@@ -529,6 +544,7 @@
 
     & input:checked ~ &__radio {
         background-color: white;
+        border-color: colors.$dark-cyan;
     }
 
     & input:checked ~ &__radio::after {
@@ -568,6 +584,11 @@
             display: flex;
             justify-content: space-between;
         }
+    }
+
+    &__header-container--mobile {
+        display: flex;
+        flex-direction: column;
     }
 
     &__heading,
@@ -992,6 +1013,149 @@
     .support {
         width: 40rem;
         top: 15rem;
+        padding: 4rem 3.5rem;
+
+        &__header {
+            font-size: 2.2rem;
+        }
+
+        &__exit {
+            position: relative;
+            top: 0.3rem;
+            right: 0;
+        }
+
+        &__exit img {
+            width: 1.7rem;
+        }
+
+        &__description {
+            font-size: 1.7rem;
+            margin-top: 2.5rem;
+            margin-bottom: 3rem;
+            line-height: 2.5rem;
+        }
+
+        &__options {
+
+            &--desktop {
+                display: none;
+            }
+
+            &--mobile {
+                display: block;
+            }
+        }
+    }
+
+    .option {
+        padding-inline: 3rem;
+        padding-top: 4rem;
+        padding-bottom: 3.3rem;
+        border-color: colors.$dark-gray;
+        border-radius: 1rem;
+
+        &__radio {
+            width: 2.8rem;
+            height: 2.8rem;
+            border-width: 0.1rem;
+            border-color: colors.$dark-gray;
+            left: 3rem;
+            top: 4rem;
+
+            &::after {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+        }
+
+        &__header,
+        &__heading {
+            font-size: 1.7rem;
+        }
+
+        &__header {
+            margin-left: 4.5rem;
+            margin-top: 0.5rem;
+            font-family: CommissionerB;
+
+            &--pledge {
+                margin-top: 0rem;
+                position: relative;
+                bottom: 0.8rem;
+            }
+        }
+
+        &__pledge {
+            padding-left: 0;
+            font-size: 1.65rem;
+            font-family: CommissionerR;
+            margin-top: 0.6rem;
+        }
+
+        &__description,
+        &__left {
+            margin-left: 0;
+        }
+
+        &__description {
+            font-size: 1.6rem;
+            line-height: 2.8rem;
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        &__left {
+            font-size: 2.1rem;
+        }
+
+        &__left span {
+            bottom: 0;
+            font-size: 1.8rem;
+            padding-left: 0.5rem;
+        }
+    }
+
+    .payment {
+        padding-top: 3.3rem;
+
+        &__hline {
+            background-color: colors.$dark-gray;
+        }
+
+        &__container {
+            flex-direction: column;
+            margin-top: 3.5rem;
+        }
+
+        &__form {
+            margin-top: 2.5rem;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            &::after {
+                font-size: 1.7rem;
+                left: 3rem;
+            }
+        }
+
+        &__par {
+            font-size: 1.7rem;
+        }
+
+        &__input,
+        &__submit {
+            height: 6rem;
+            width: 12.5rem;
+            border-radius: 3rem;
+            font-size: 1.7rem;
+        }
+
+        &__input {
+            margin-right: 0;
+            border-color: colors.$dark-gray;
+        }
     }
 
     .thanks {
