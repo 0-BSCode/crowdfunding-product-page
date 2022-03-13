@@ -773,6 +773,7 @@
   }
   .container > * {
     border-color: gainsboro;
+    border-width: 0.15rem;
   }
 
   .title {
@@ -870,6 +871,7 @@
   .reward {
     padding: 3rem 2.7rem;
     border-color: gainsboro;
+    border-width: 0.15rem;
   }
   .reward__title {
     flex-direction: column;
@@ -883,7 +885,7 @@
     margin-top: 0.6rem;
   }
   .reward__description {
-    font-size: 1.7rem;
+    font-size: 1.65rem;
     text-align: start;
     line-height: 2.9rem;
     margin-top: 2.5rem;
@@ -912,6 +914,7 @@
     top: 15rem;
     padding: 4rem 3.5rem;
     border-color: gainsboro;
+    border-width: 0.15rem;
   }
   .support__header {
     font-size: 2.2rem;
@@ -925,7 +928,7 @@
     width: 1.7rem;
   }
   .support__description {
-    font-size: 1.7rem;
+    font-size: 1.65rem;
     margin-top: 2.5rem;
     margin-bottom: 3rem;
     line-height: 2.5rem;
@@ -944,6 +947,7 @@
     border-radius: 1rem;
     margin-top: 3rem;
     border-color: gainsboro;
+    border-width: 0.15rem;
   }
   .option__radio {
     width: 2.8rem;
@@ -952,6 +956,7 @@
     left: 3rem;
     top: 4rem;
     border-color: gainsboro;
+    border-width: 0.15rem;
   }
   .option__radio::after {
     width: 1.5rem;
@@ -1001,6 +1006,10 @@
   .payment__container {
     flex-direction: column;
     margin-top: 3.5rem;
+  }
+  .payment__hline {
+    background-color: gainsboro;
+    height: 0.15rem;
   }
   .payment__form {
     margin-top: 2.5rem;
