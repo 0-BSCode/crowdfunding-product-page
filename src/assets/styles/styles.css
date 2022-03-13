@@ -458,7 +458,7 @@
 
 /* PAYMENT OPTIONS */
 .option {
-  border: 0.1rem solid whitesmoke;
+  border: 0.1rem solid gainsboro;
   border-radius: 0.8rem;
   padding: 2.2rem 1.8rem 1.3rem 1.8rem;
   margin-top: 2rem;
@@ -486,7 +486,7 @@
   width: 1.5rem;
   background-color: white;
   border-radius: 50%;
-  border: solid 0.15rem whitesmoke;
+  border: solid 0.1rem gainsboro;
   z-index: 1;
   /* Color inside radio button once clicked */
 }
@@ -508,9 +508,14 @@
 .option input:hover ~ .option__header--out > .option__header-container > .option__heading {
   color: black;
 }
+.option input:hover ~ .option__radio {
+  border-color: #3cb4ac;
+}
+.option input:hover ~ .option__radio--out {
+  border-color: gainsboro;
+}
 .option input:checked ~ .option__radio {
   background-color: white;
-  border-color: #147b74;
 }
 .option input:checked ~ .option__radio::after {
   display: block;
@@ -586,7 +591,7 @@
   left: 0;
   width: 100%;
   height: 0.1rem;
-  background-color: whitesmoke;
+  background-color: gainsboro;
 }
 .payment__container {
   margin-top: 1.8rem;
@@ -608,7 +613,7 @@
   top: 50%;
   left: 1.5rem;
   transform: translate(0%, -50%);
-  color: #7a7a7a;
+  color: gainsboro;
   font-family: CommissionerB;
   opacity: 0.4;
 }
@@ -620,7 +625,7 @@
 }
 .payment__input {
   margin-right: 1rem;
-  border: solid 0.1rem whitesmoke;
+  border: solid 0.1rem gainsboro;
   text-align: center;
   font-family: CommissionerB;
   font-size: 0.9rem;
@@ -931,7 +936,6 @@
     padding-inline: 3rem;
     padding-top: 4rem;
     padding-bottom: 3.3rem;
-    border-color: #c8c8c8;
     border-radius: 1rem;
     margin-top: 3rem;
   }
@@ -939,7 +943,6 @@
     width: 2.8rem;
     height: 2.8rem;
     border-width: 0.1rem;
-    border-color: #c8c8c8;
     left: 3rem;
     top: 4rem;
   }
@@ -987,9 +990,6 @@
   .payment {
     padding-top: 3.3rem;
   }
-  .payment__hline {
-    background-color: #c8c8c8;
-  }
   .payment__container {
     flex-direction: column;
     margin-top: 3.5rem;
@@ -1015,7 +1015,6 @@
   }
   .payment__input {
     margin-right: 0;
-    border-color: #c8c8c8;
     border-width: 0.2rem;
   }
 
